@@ -15,7 +15,7 @@ Gerenciamento de projetos é, segundo o PMBOK (2013), "a aplicação de conhecim
 Gerencia de Projetos de Software:
 
 
-PMBOK:
+PMBOK: 5 ed.
 
 Metodologias ágeis:
 
