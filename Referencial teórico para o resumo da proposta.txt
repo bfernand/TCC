@@ -1,0 +1,27 @@
+--Conceitos--
+
+Projeto: 
+
+De acordo com o Project Management Institute (PMBOK, 2013), projeto é "um esforço temporário empreendido para criar um produto, serviço ou resultado único". Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes (RUP, 2002).
+Segundo Gray e Larson (2009, p. 5), o maior objetivo de um projeto de software é a satisfação de um cliente. Mas existem 5 principais características de um projeto, que o diferencia de outros esforços de uma organização: Projetos tem um objetivo estabelecido, um período de validade definido, geralmente conta com o envolvimento de diversos departamentos e proficionais, comumente é para a elaboração de algo nunca antes realizado, e possui tempo, custo e requerimentos de desempenho específicos. 
+É importante salientar, também, o que não é um projeto. "Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo" (GRAY; LARSON, 2009, p. 6).
+
+http://www.wthreex.com/rup/portugues/process/glossary.htm
+https://books.google.com.br/books?hl=pt-BR&lr=&id=OFWZPhHom74C&oi=fnd&pg=PR5&dq=gerenciamento+de+projetos&ots=3TaZIGMMCs&sig=ref8ntu6wK_loMqL9Sq2Q0z4xFI#v=onepage&q&f=false
+
+Gerência de Projetos:
+Gerenciamento de projetos é, segundo o PMBOK (2013), "a aplicação de conhecimentos, habilidades, ferramentas e técnicas as atividades do projeto a fim de atender aos seus requisitos". Gerenciamento de projetos também é um estilo de administração orientado a resultados que premia a criação de relacionamentos colaborativos entre as diferentes pessoas de uma equipe (GRAY; LARSON, 2009, p. 3).
+
+Gerencia de Projetos de Software:
+
+
+PMBOK:
+
+Metodologias ágeis:
+
+=============
+Contextualizar gerência de projetos na engenharia de Software:
+O fracasso de muitos grandes projetos de software, na década de 60 e começo de 70, foi a primeira indicação das dificuldades de gerenciamento de software. O software era entregue com atraso, não era confiável, custava muitas vezes mais do que as estimativas iniciais previam e ainda, muitas vezes, apresentava características precárias de desempenho (BROOKS apud SUMMERVILLE, 1975). Em 1998, dados da indústria indicavam que 26% dos projetos de software falharam de imediato e 46% ultrapassavam os custos e os prazos (REEL apud PRESSMAN, 1999, p.484). Planejar e controlar projetos de software é a única forma conhecida de se gerir a complexidade (PRESSMAN, 1999, p.484).
+
+Apud:
+http://www.marcelo.sabbatini.com/4-fatos-que-voce-precisa-saber-sobre-a-citacao-da-citacao-apud/

@@ -1,0 +1,18 @@
+O que é projeto?
+O que é gerenciamento de projetos?
+O que é Gerenciamento de Projetos de Software?
+Por que gerenciar projetos de software?
+O que faz um projeto fracassar?
+O que fazer para obter sucesso em um projeto segundo o PMBOK?
+Quais as outras formas de gerenciar projetos de Software? Quais as outras metodologias de gerenciamento? (ágil)
+Quais as características de cada metodologia ágil a respeito do gerenciamento do projeto?
+Quais as vantagens do ágil sobre o tradicional?
+Quais as desvantagens?
+É possível ser ágil atendendo ao PMBOK?
+Quais os casos de sucesso de gerenciamento de projeto de software tradicional? E os casos de fracasso?
+Quais os casos de sucesso de gerenciamento de projeto de software ágil? E os casos de fracasso?
+O que existe de comum e de diferente nos casos acima?
+
+Fábrica de Software: Implantação e gestão de operações - Fernandes e Teixeira.
+Pág. 101: Aqui fala sobre determinação da complexidade de um projeto através de seu porte. Assim dá para saber se é melhor usar o PMBOK em sua totalidade ou apenas parte.
+ 
