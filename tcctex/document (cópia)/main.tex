@@ -1,0 +1,465 @@
+%% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
+
+\documentclass[
+    % -- opções da classe memoir --
+    12pt,               % tamanho da fonte
+    openright,          % capítulos começam em pág ímpar (insere página vazia caso preciso)
+    oneside,            % para impressão em verso e anverso. Oposto a % oneside
+    a4paper,            % tamanho do papel. 
+    % -- opções da classe abntex2 --
+    %chapter=TITLE,     % títulos de capítulos convertidos em letras maiúsculas
+    %section=TITLE,     % títulos de seções convertidos em letras maiúsculas
+    %subsection=TITLE,  % títulos de subseções convertidos em letras maiúsculas
+    %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+    % -- opções do pacote babel --
+    english,            % idioma adicional para hifenização
+    %french,             % idioma adicional para hifenização
+    spanish,            % idioma adicional para hifenização
+    portuguese              % o último idioma é o principal do documento
+    ]{abntex2}
+
+% ---
+% Pacotes básicos 
+% ---
+
+
+\usepackage{lmodern}            % Usa a fonte Latin Modern          
+\usepackage[T1]{fontenc}        % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}     % Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}           % Usado pela Ficha catalográfica
+\usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color,xcolor}              % Controle das cores
+\usepackage{graphicx}           % Inclusão de gráficos
+\usepackage{microtype}          % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{tabulary}
+\usepackage{caption}
+\usepackage{soul}
+\usepackage{rotating}
+%% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
+\renewenvironment{quotation}%
+  {%
+   \small
+   \begin{list}{}{%
+       \setlength{\listparindent}{0cm}%
+       \setlength{\itemindent}{\listparindent}%
+       \setlength{\rightmargin}{0cm}%
+       \setlength{\leftmargin}{4cm}%
+       \setlength{\parsep}{0pt}}%
+    \item\relax}%
+  {\end{list}}
+%% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
+\usepackage{caption}
+\let\newfloat\undefined
+\usepackage{floatrow}
+
+\floatsetup[table]{capposition=top}
+\floatsetup[figure]{capposition=top}
+
+\captionsetup[table]{justification=centering,width=\textwidth,labelfont=bf,textfont=bf}
+\captionsetup[lstlisting]{justification=centering,width=\textwidth,labelfont=bf,textfont=bf}
+\captionsetup[figure]{justification=centering,width=\textwidth,labelfont=bf,textfont=bf}
+
+	\usepackage{helvet}
+	\renewcommand{\familydefault}{\sfdefault}
+
+% ---
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}             % para geração de dummy text
+% ---
+
+\usepackage{abnt_customization}
+
+% ---
+% Pacotes de citações
+% ---
+
+\usepackage[brazilian,hyperpageref]{backref}     % Paginas com as citações na bibl
+
+
+
+\usepackage[alf]{abntex2cite}   % Citações padrão ABNT
+
+
+% Adaptacao para os comando do Fastformat
+%\newcommand{\citep}{\cite}
+%\newcommand{\citet}{\citeonline}
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+    \ifcase #1 %
+        Nenhuma citação no texto.%
+    \or
+        Citado na página #2.%
+    \else
+        Citado #1 vezes nas páginas #2.%
+    \fi}%
+% ---
+
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+        %pagebackref=true,
+        pdftitle={\@title}, 
+        pdfauthor={\@author},
+        pdfsubject={\imprimirpreambulo},
+        pdfcreator={fastformat.co},
+        pdfkeywords={fastformat.co}, 
+        %
+        colorlinks=true,            % false: boxed links; true: colored links
+        linkcolor=blue,             % color of internal links
+        citecolor=blue,             % color of links to bibliography
+        filecolor=magenta,          % color of file links
+        urlcolor=blue,
+        %
+        bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{%
+ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PROJETOS DE SOFTWARE%
+}%
+
+\autor{ Bruno Fernandes }
+\local{ Maringá }
+\data{ Fevereiro de 2016 }
+\orientador{ Prof. Dr. Donizete Bruzarosco }
+
+\instituicao{%
+  \bfseries
+  \MakeUppercase{ Universidade Estadual de Maringá }
+  \par
+  \MakeUppercase{ Centro de Tecnologia }
+  \par
+  \MakeUppercase{ Departamento de Informática }
+  \par
+  \MakeUppercase{ Graduação em Informática } }
+\tipotrabalho{ Trabalho de Conclusão de Curso }
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{ Monografia apresentada ao curso de Informática da UEM, como requisito para obtenção do título de bacharel em Informática. }
+% ---
+
+\def\volume{  }
+
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ---
+\renewcommand{\ABNTEXchapterfontsize}{\LARGE}
+\renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
+\renewcommand{\ABNTEXsectionfontsize}{\Large}
+\renewcommand{\ABNTEXsubsectionfontsize}{\large}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+%\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+
+
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+
+% ---
+
+% ---
+% Inserir a ficha bibliografica
+% ---
+
+% ---
+
+% ---
+% Inserir errata
+% ---
+% \begin{errata}
+% Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
+% 
+% \vspace{\onelineskip}
+% 
+% FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
+% reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
+% rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
+% cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
+% Zootecnia, Universidade de São Paulo, São Paulo, 2011.
+% 
+% \begin{table}[htb]
+% \center
+% \footnotesize
+% \begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
+%   \hline
+%    \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
+%     \hline
+%     1 & 10 & auto-conclavo & autoconclavo\\
+%    \hline
+% \end{tabular}
+% \end{table}
+% 
+% \end{errata}
+% ---
+
+% ---
+% Inserir folha de aprovação
+% ---
+
+% ---
+
+% ---
+% Dedicatória
+% ---
+
+% ---
+
+% ---
+% Agradecimentos
+% --
+
+% ---
+
+% ---
+% Epígrafe
+% ---
+
+% ---
+
+% ---
+% RESUMOS
+% ---
+% resumo em português
+
+
+% resumo em inglês
+
+
+% resumo em francês 
+
+
+% resumo em espanhol
+
+% ---
+
+% ---
+% inserir lista de ilustrações
+% ---
+
+  \pdfbookmark[0]{\listfigurename}{lof}
+  \listoffigures*
+  \cleardoublepage
+
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+
+  \pdfbookmark[0]{\listtablename}{lot}
+  \listoftables*
+  \cleardoublepage
+
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+% \begin{simbolos}
+%   \item[$ \Gamma $] Letra grega Gama
+%   \item[$ \Lambda $] Lambda
+%   \item[$ \zeta $] Letra grega minúscula zeta
+%   \item[$ \in $] Pertence
+% \end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+
+\chapter{INTRODUÇÃO}
+
+Desenvolvimento de software não é uma tarefa trivial, portanto é importante que se faça um gerenciamento do projeto de desenvolvimento para que o produto final tenha qualidade. Planejar e controlar projetos de software é a única forma conhecida de se gerir a complexidade dos projetos de software \cite[p.~484]{pressman2006}.
+
+
+O StandishGroup, através do relatório Chaos, define algumas características para projetos bem sucedidos, e são elas: projeto finalizado dentro do prazo, dentro do orçamento e contemplando todas as funcionalidades inicialmente especificadas (ChaosReport, The StandishGroup, 2013). Neste contexto, a gerência de projetos se caracteriza como uma atividade fundamental para obtenção da qualidade do produto de software e do seu sucesso.~
+
+
+O PMBOK é um conjunto de boas práticas de gerência de projetos consolidado e aceito internacionalmente, porém, atualmente tem sido notável a utilização de outras metodologias para gerência de projetos de software, conhecidas como metodologias ágeis. Estes modelos ditos ágeis priorizam o valor agregado e as interações entre as pessoas do que o cumprimento de prazos custo ou atendimento ao escopo inicial (PRIKLADNICKI; WILLI; MILANI, 2014, p. xxi).
+
+
+O presente trabalho busca responder a questão de se as metodologias ágeis, para gerência de projetos, atendem as boas práticas indicadas pelo PMBOK.
+
+
+
+\chapter{REFERENCIAL TEÓRICO}
+
+Lorem ipsum bla bla bla dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+Incidunt inventore reiciendis illo? Harum fuga dolore enim debitis assumenda quis dignissimos totam, nostrum adipisci minima, quos natus voluptatibus vero? Voluptate magni rem eaque aperiam enim fugiat, iste odit neque est architecto sapiente numquam, quo animi aliquid sunt hic repudiandae soluta, exercitationem natus ad voluptatem assumenda eveniet laboriosam unde inventore.
+
+
+
+\section{CONCEITOS BÁSICOS DE GERÊNCIA DE PROJETO DE SOFTWARE}
+
+De acordo com o PMBOK (PMI, 2013) ~, projeto é \textquotedblleft{}um esforço temporário empreendido para criar um produto, serviço ou resultado único\textquotedblright{}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes (RUP ~, 2002). Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consomem recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros (KERZNER, 2009, p. 2).
+
+
+Segundo Gray e Larson (2009, p. 5), o maior objetivo de um projeto de software é a satisfação de um cliente. Mas existem 5 principais características de um projeto, que o diferencia de outros esforços de uma organização: Projetos tem um objetivo estabelecido, um período de validade definido, geralmente conta com o envolvimento de diversos departamentos e profissionais, comumente é para a elaboração de algo nunca antes realizado, e possui tempo, custo e requerimentos de desempenho específicos.~
+
+
+É importante salientar, também, o que não é um projeto. \textquotedblleft{}Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo\textquotedblright{} (GRAY; LARSON, 2009, p. 6).
+
+
+Gerenciamento de projetos é, segundo o PMBOK (PMI, 2013), \textquotedblleft{}a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos\textquotedblright{}. Gerenciamento de projetos também é um estilo de administração orientado a resultados que premia a criação de relacionamentos colaborativos entre as diferentes pessoas de uma equipe (GRAY; LARSON, 2009, p. 3).
+
+
+
+\chapter{Metodologia}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+Delectus expedita iusto, corporis veniam unde. Beatae nulla minus quo deleniti dolores velit, aut voluptatibus a, qui dignissimos aliquid pariatur obcaecati alias repudiandae? Excepturi ut atque ipsum culpa neque enim laboriosam necessitatibus saepe ad eum, vel ipsum iusto necessitatibus assumenda pariatur facere dolores modi neque facilis, hic velit facilis? Officia numquam facere deleniti aperiam laborum recusandae, error ipsum officia distinctio natus sit tempore consequatur nemo placeat, quibusdam ullam minima ducimus incidunt inventore corrupti laboriosam, quae libero tempore inventore totam expedita reiciendis.
+
+
+
+\chapter{Resultados}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+Quasi autem laborum nobis laboriosam modi, ipsum corporis debitis illo libero voluptatem deserunt minus totam aperiam, placeat dolor maiores impedit est fuga saepe. Distinctio sit cum commodi eum quisquam asperiores nisi explicabo, libero nobis iste natus, voluptatibus quasi debitis illum voluptatum molestiae magni porro doloribus unde tempore. Numquam sint nam debitis corporis exercitationem? Sed reprehenderit dolor quae esse ipsa vero fugiat expedita inventore non, hic obcaecati illum odit corrupti mollitia ad velit assumenda ratione natus nulla, perferendis dignissimos animi, perspiciatis enim pariatur possimus eaque?
+
+
+Ea molestias harum illum nobis molestiae cumque quidem optio, quo veniam dolore perspiciatis nesciunt deserunt doloremque nisi commodi nam, deleniti doloremque optio dolorem possimus velit nostrum amet, voluptate soluta nesciunt hic? Libero omnis est fugit soluta iste, ut tempora nesciunt dignissimos distinctio esse id sit, nam asperiores enim facere laudantium vitae fuga ut nulla omnis ab nisi? Tempore ducimus assumenda commodi deleniti placeat officia optio perspiciatis, placeat excepturi amet magni facilis autem officiis eius explicabo saepe nemo, esse nobis ipsam cum ipsa sit recusandae dignissimos quis cumque earum, laudantium quae soluta officiis incidunt quia consequuntur quidem explicabo sunt illo? Saepe aliquid obcaecati vitae iusto voluptate quod aut illo ex a, natus nisi exercitationem non deleniti obcaecati ipsam atque optio magni, enim distinctio quisquam?
+
+
+
+\chapter{Conclusão}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+% ----------------------------------------------------------
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{references}
+
+
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}

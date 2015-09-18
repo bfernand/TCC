@@ -1,0 +1,14 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v<VERSION> }
+
+\bibitem[Pressman 2006]{pressman2006}
+\abntrefinfo{Pressman}{PRESSMAN}{2006}
+{PRESSMAN, R. \emph{Engenharia de software}. McGraw-Hill, 2006.
+ISBN 9788586804571. Dispon{\'\i}vel em:
+  $<$https:\-/\-/books\-.google\-.com\-.br\-/books?id=MNM6AgAACAAJ$>$.}
+
+\end{thebibliography}

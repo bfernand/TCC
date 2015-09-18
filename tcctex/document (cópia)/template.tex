@@ -1,0 +1,190 @@
+%% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
+
+\documentclass[
+    % -- opções da classe memoir --
+    12pt,               % tamanho da fonte
+    openright,          % capítulos começam em pág ímpar (insere página vazia caso preciso)
+    {{ print_side }},            % para impressão em verso e anverso. Oposto a % oneside
+    {{ paper }},            % tamanho do papel. 
+    % -- opções da classe abntex2 --
+    %chapter=TITLE,     % títulos de capítulos convertidos em letras maiúsculas
+    %section=TITLE,     % títulos de seções convertidos em letras maiúsculas
+    %subsection=TITLE,  % títulos de subseções convertidos em letras maiúsculas
+    %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+    % -- opções do pacote babel --
+    english,            % idioma adicional para hifenização
+    french,             % idioma adicional para hifenização
+    spanish,            % idioma adicional para hifenização
+    {{ language }}              % o último idioma é o principal do documento
+    ]{abntex2}
+
+% ---
+% Pacotes básicos 
+% ---
+{% if show_watermark %}
+{% include 'util/ff-watermark.sty' %}
+{% endif %}
+
+\usepackage{lmodern}            % Usa a fonte Latin Modern          
+\usepackage[T1]{fontenc}        % Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}     % Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}           % Usado pela Ficha catalográfica
+\usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
+\usepackage{color,xcolor}              % Controle das cores
+\usepackage{graphicx}           % Inclusão de gráficos
+\usepackage{microtype}          % para melhorias de justificação
+\usepackage{booktabs}
+\usepackage{tabulary}
+\usepackage{caption}
+\usepackage{soul}
+\usepackage{rotating}
+{% include 'util/ff-abnt-quotation.sty' %}
+{% include 'util/ff-abnt-caption.sty' %}
+{% include 'util/ff-font.sty' %}
+% ---
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}             % para geração de dummy text
+% ---
+
+\usepackage{abnt_customization}
+
+{% include 'util/ff-abntex2-citation.sty' %}
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{%
+{{ title|default:'Título do Documento' }}%
+}%
+
+\autor{ {% for a in authors %}{{ a.name_escaped }}{%if not forloop.last%}\\{% endif %}{% empty %}Autor do Documento{% endfor %} }
+\local{ {{ opt_text_local|default:'LOCAL' }} }
+\data{ {{ opt_text_data|default:'DATA' }} }
+\orientador{ {{ opt_text_orientador|default:'Nome do Orientador' }} }
+{% if opt_text_coorientador %}\coorientador{ {{ opt_text_coorientador|default:'Co-orientador'}} }{% endif %}
+\instituicao{%
+  \bfseries
+  \MakeUppercase{ {{opt_text_universidade|default:'Nome da Instituição'}} }
+  \par
+  \MakeUppercase{ {{ opt_text_centro|default:'' }} }
+  \par
+  \MakeUppercase{ {{ opt_text_departamento|default:'' }} }
+  \par
+  \MakeUppercase{ {{ opt_text_programa|default:'' }} } }
+\tipotrabalho{ {{ opt_text_tipo_de_trabalho|default:'Dissertação de Mestrado' }} }
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{ {{ opt_text_preambulo|default:'O texto do Pré-âmbulo ainda está vazio. Preencha-o nos atributos do documento. O texto do Pré-âmbulo ainda está vazio. Preencha-o nos atributos do documento. O texto do Pré-âmbulo ainda está vazio. Preencha-o nos atributos do documento.' }} }
+% ---
+
+\def\volume{ {{ opt_text_volume }} }
+
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+%\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+{% include 'util/ff-abntex2-pre-textual.sty' %}
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+{{ content }}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+% ----------------------------------------------------------
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+
+{% if has_references %}
+\bibliography{references}
+{% endif %}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+{% if appendix %}
+\begin{apendicesenv}
+
+% Imprime uma página indicando o início dos apêndices
+\partapendices
+
+{{ appendix }}
+
+\end{apendicesenv}
+{% endif %}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+{% if attachment %}
+\begin{anexosenv}
+
+% Imprime uma página indicando o início dos anexos
+\partanexos
+
+{{ attachment }}
+
+\end{anexosenv}
+{% endif %}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}
