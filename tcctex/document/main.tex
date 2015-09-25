@@ -4,10 +4,10 @@
     % -- opções da classe memoir --
     12pt,               % tamanho da fonte
     openright,          % capítulos começam em pág ímpar (insere página vazia caso preciso)
-    oneside,            % para impressão em verso e anverso. Oposto a % oneside
+    twoside,            % para impressão em verso e anverso. Oposto a % oneside
     a4paper,            % tamanho do papel. 
     % -- opções da classe abntex2 --
-    %chapter=TITLE,     % títulos de capítulos convertidos em letras maiúsculas
+    chapter=TITLE,     % títulos de capítulos convertidos em letras maiúsculas
     %section=TITLE,     % títulos de seções convertidos em letras maiúsculas
     %subsection=TITLE,  % títulos de subseções convertidos em letras maiúsculas
     %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
@@ -48,7 +48,6 @@
     \item\relax}%
   {\end{list}}
 %% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
-\usepackage{caption}
 \let\newfloat\undefined
 \usepackage{floatrow}
 
@@ -67,7 +66,7 @@
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
-\usepackage{lipsum}             % para geração de dummy text
+%\usepackage{lipsum}             % para geração de dummy text
 % ---
 
 \usepackage{abnt_customization}
@@ -77,15 +76,8 @@
 % ---
 
 \usepackage[brazilian,hyperpageref]{backref}     % Paginas com as citações na bibl
-
-
-
 \usepackage[alf]{abntex2cite}   % Citações padrão ABNT
 
-
-% Adaptacao para os comando do Fastformat
-%\newcommand{\citep}{\cite}
-%\newcommand{\citet}{\citeonline}
 
 % --- 
 % CONFIGURAÇÕES DE PACOTES
@@ -123,7 +115,7 @@
         pdftitle={\@title}, 
         pdfauthor={\@author},
         pdfsubject={\imprimirpreambulo},
-        pdfcreator={fastformat.co},
+        pdfcreator={LaTeX with abnTeX2},
         pdfkeywords={fastformat.co}, 
         %
         colorlinks=true,            % false: boxed links; true: colored links
@@ -140,28 +132,24 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{%
-ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PROJETOS DE SOFTWARE%
-}%
+\titulo{ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PROJETOS DE SOFTWARE}
 
-\autor{ Bruno Fernandes }
-\local{ Maringá }
-\data{ Fevereiro de 2016 }
-\orientador{ Prof. Dr. Donizete Bruzarosco }
+\autor{Bruno Fernandes}
+\local{Maringá}
+\data{Fevereiro de 2016}
+\orientador{Prof. Dr. Donizete Bruzarosco}
 
-\instituicao{%
+\instituicao{
   \bfseries
-  \MakeUppercase{ Universidade Estadual de Maringá }
+  \MakeUppercase{Universidade Estadual de Maringá}
   \par
-  \MakeUppercase{ Centro de Tecnologia }
+  \MakeUppercase{Departamento de Informática}
   \par
-  \MakeUppercase{ Departamento de Informática }
-  \par
-  \MakeUppercase{ Graduação em Informática } }
-\tipotrabalho{ Trabalho de Conclusão de Curso }
+  \MakeUppercase{Bacharelado em Informática} }
+\tipotrabalho{Trabalho de Conclusão de Curso}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{ Monografia apresentada ao curso de Informática da UEM, como requisito para obtenção do título de bacharel em Informática. }
+\preambulo{Monografia apresentada ao curso de Informática da UEM, como requisito para obtenção do título de bacharel em Informática.}
 % ---
 
 \def\volume{  }
@@ -188,6 +176,7 @@ ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PR
 % ----
 \begin{document}
 
+
 % Seleciona o idioma do documento (conforme pacotes do babel)
 %\selectlanguage{english}
 \selectlanguage{brazil}
@@ -212,21 +201,55 @@ ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PR
 % ---
 % Capa
 % ---
-
+\imprimircapa
 
 % ---
 
 % ---
 % Folha de rosto
-% (o * indica que haverá a ficha bibliográfica)
+% (o * indica que haverá a ficha catalográfica)
+% ---
+\imprimirfolhaderosto*
 % ---
 
 % ---
-
+% Inserir a ficha catalográfica
 % ---
-% Inserir a ficha bibliografica
-% ---
+\begin{fichacatalografica}
+	\sffamily
+  \vspace*{10cm} 		% Posição vertical
+  \hrule				% Linha horizontal
+  \begin{center}		% Minipage Centralizado
+  \begin{minipage}[c]{12.5cm} % Largura
 
+  \imprimirautor
+
+  \hspace{0.5cm} \imprimirtitulo / \imprimirautor. --
+  \imprimirlocal, \imprimirdata-
+  
+  \hspace{0.5cm} \pageref{LastPage} p. : il.(alguma color.); 30 cm.\\
+
+  \hspace{0.5cm} \imprimirorientadorRotulo ~\imprimirorientador\\
+
+\hspace{0.5cm}
+\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+\imprimirdata.}\\
+
+  \hspace{0.5cm}
+	1. Palavra-chave1.
+	2. Palavra-chave2.
+	I. Orientador.
+	II. Universidade xxx.
+	III. Faculdade de xxx.
+	IV. Título\\
+	
+  \hspace{8.75cm} CDU 02:141:005.7\\
+  
+  \end{minipage}
+  \end{center}
+  \hrule
+  \newpage
+\end{fichacatalografica}
 % ---
 
 % ---
@@ -260,8 +283,42 @@ ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PR
 
 % ---
 % Inserir folha de aprovação
+% Substituir por versão digitalizada ao finalizar o TCC
 % ---
+\begin{folhadeaprovacao}
 
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+     \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center} 
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+    
+   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2015:
+
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{Professor} \\ Convidado 1}
+   \assinatura{\textbf{Professor} \\ Convidado 2}
+   \assinatura{\textbf{Professor} \\ Convidado 3}
+      
+   \begin{center}
+    \vspace*{0.5cm}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+  
+\end{folhadeaprovacao}
 % ---
 
 % ---
@@ -322,7 +379,11 @@ ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PR
 % inserir lista de abreviaturas e siglas
 % ---
 
-% ---
+\begin{siglas}
+	\item[PMBOK] Project Management Body of Knowledge
+	\item[PMI] Project Management Institute
+	\item[ABNT] Associação Brasileira de Normas Técnicas
+\end{siglas}
 
 % ---
 % inserir lista de símbolos
@@ -338,7 +399,7 @@ ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PR
 % ---
 % inserir o sumario
 % ---
-
+\tableofcontents
 % ---
 
 % ----------------------------------------------------------
@@ -347,7 +408,7 @@ ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PR
 \textual
 
 
-\chapter{INTRODUÇÃO}
+\chapter{Introdução}
 
 Desenvolvimento de software não é uma tarefa trivial, portanto é importante que se faça um gerenciamento do projeto de desenvolvimento para que o produto final tenha qualidade. Planejar e controlar projetos de software é a única forma conhecida de se gerir a complexidade dos projetos de software \cite[p.~484]{pressman2006}.
 
@@ -355,7 +416,7 @@ Desenvolvimento de software não é uma tarefa trivial, portanto é importante q
 O \citeonline{chaos2013}, através do relatório Chaos, define algumas características para projetos bem sucedidos, e são elas: projeto finalizado dentro do prazo, dentro do orçamento e contemplando todas as funcionalidades inicialmente especificadas. Neste contexto, a gerência de projetos se caracteriza como uma atividade fundamental para obtenção da qualidade do produto de software e do seu sucesso.
 
 
-O PMBOK é um conjunto de boas práticas de gerência de projetos consolidado e aceito internacionalmente, porém, atualmente tem sido notável a utilização de outras metodologias para gerência de projetos de software, conhecidas como metodologias ágeis. Estes modelos ditos ágeis priorizam o valor agregado e as interações entre as pessoas do que o cumprimento de prazos custo ou atendimento ao escopo inicial \cite[p.~xxi]{prikladnickiAtAll}.
+O PMBOK\index{PMBOK} é um conjunto de boas práticas de gerência de projetos consolidado e aceito internacionalmente, porém, atualmente tem sido notável a utilização de outras metodologias para gerência de projetos de software, conhecidas como metodologias ágeis. Estes modelos ditos ágeis priorizam o valor agregado e as interações entre as pessoas do que o cumprimento de prazos custo ou atendimento ao escopo inicial \cite[p.~xxi]{prikladnickiAtAll}.
 
 
 O presente trabalho busca responder a questão de se as metodologias ágeis, para gerência de projetos, atendem as boas práticas indicadas pelo PMBOK.
