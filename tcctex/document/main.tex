@@ -1,4 +1,4 @@
-%% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
+%% Documento gerado após muito esforço por Bruno Fernandes
 
 \documentclass[
     % -- opções da classe memoir --
@@ -20,7 +20,7 @@
 % ---
 % Pacotes básicos 
 % ---
-
+\label{preâmbulo}
 
 \usepackage{lmodern}            % Usa a fonte Latin Modern          
 \usepackage[T1]{fontenc}        % Selecao de codigos de fonte.
@@ -174,6 +174,7 @@
 % ----
 % Início do documento
 % ----
+\label{inicio do doc}
 \begin{document}
 
 
@@ -190,7 +191,7 @@
 \renewcommand{\ABNTEXsectionfontsize}{\Large}
 \renewcommand{\ABNTEXsubsectionfontsize}{\large}
 \renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
-%\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 % ---
 
 % ----------------------------------------------------------
@@ -201,6 +202,7 @@
 % ---
 % Capa
 % ---
+\label{capa}
 \imprimircapa
 
 % ---
@@ -209,12 +211,14 @@
 % Folha de rosto
 % (o * indica que haverá a ficha catalográfica)
 % ---
+\label{folha rosto}
 \imprimirfolhaderosto*
 % ---
 
 % ---
 % Inserir a ficha catalográfica
 % ---
+\label{ficha catalografica}
 \begin{fichacatalografica}
 	\sffamily
   \vspace*{10cm} 		% Posição vertical
@@ -255,6 +259,7 @@
 % ---
 % Inserir errata
 % ---
+\label{errata}
 % \begin{errata}
 % Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
 % 
@@ -285,6 +290,7 @@
 % Inserir folha de aprovação
 % Substituir por versão digitalizada ao finalizar o TCC
 % ---
+\label{folha aprovação}
 \begin{folhadeaprovacao}
 
   \begin{center}
@@ -358,7 +364,7 @@
 % ---
 % inserir lista de ilustrações
 % ---
-
+\label{lista ilustrações}
   \pdfbookmark[0]{\listfigurename}{lof}
   \listoffigures*
   \cleardoublepage
@@ -368,7 +374,7 @@
 % ---
 % inserir lista de tabelas
 % ---
-
+\label{lista tabelas}
   \pdfbookmark[0]{\listtablename}{lot}
   \listoftables*
   \cleardoublepage
@@ -378,7 +384,7 @@
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-
+\label{lista siglas}
 \begin{siglas}
 	\item[PMBOK] Project Management Body of Knowledge
 	\item[PMI] Project Management Institute
@@ -459,6 +465,13 @@ Quasi autem laborum nobis laboriosam modi, ipsum corporis debitis illo libero vo
 
 Ea molestias harum illum nobis molestiae cumque quidem optio, quo veniam dolore perspiciatis nesciunt deserunt doloremque nisi commodi nam, deleniti doloremque optio dolorem possimus velit nostrum amet, voluptate soluta nesciunt hic? Libero omnis est fugit soluta iste, ut tempora nesciunt dignissimos distinctio esse id sit, nam asperiores enim facere laudantium vitae fuga ut nulla omnis ab nisi? Tempore ducimus assumenda commodi deleniti placeat officia optio perspiciatis, placeat excepturi amet magni facilis autem officiis eius explicabo saepe nemo, esse nobis ipsam cum ipsa sit recusandae dignissimos quis cumque earum, laudantium quae soluta officiis incidunt quia consequuntur quidem explicabo sunt illo? Saepe aliquid obcaecati vitae iusto voluptate quod aut illo ex a, natus nisi exercitationem non deleniti obcaecati ipsam atque optio magni, enim distinctio quisquam?
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+Quasi autem laborum nobis laboriosam modi, ipsum corporis debitis illo libero voluptatem deserunt minus totam aperiam, placeat dolor maiores impedit est fuga saepe. Distinctio sit cum commodi eum quisquam asperiores nisi explicabo, libero nobis iste natus, voluptatibus quasi debitis illum voluptatum molestiae magni porro doloribus unde tempore. Numquam sint nam debitis corporis exercitationem? Sed reprehenderit dolor quae esse ipsa vero fugiat expedita inventore non, hic obcaecati illum odit corrupti mollitia ad velit assumenda ratione natus nulla, perferendis dignissimos animi, perspiciatis enim pariatur possimus eaque?
+
+
+Ea molestias harum illum nobis molestiae cumque quidem optio, quo veniam dolore perspiciatis nesciunt deserunt doloremque nisi commodi nam, deleniti doloremque optio dolorem possimus velit nostrum amet, voluptate soluta nesciunt hic? Libero omnis est fugit soluta iste, ut tempora nesciunt dignissimos distinctio esse id sit, nam asperiores enim facere laudantium vitae fuga ut nulla omnis ab nisi? Tempore ducimus assumenda commodi deleniti placeat officia optio perspiciatis, placeat excepturi amet magni facilis autem officiis eius explicabo saepe nemo, esse nobis ipsam cum ipsa sit recusandae dignissimos quis cumque earum, laudantium quae soluta officiis incidunt quia consequuntur quidem explicabo sunt illo? Saepe aliquid obcaecati vitae iusto voluptate quod aut illo ex a, natus nisi exercitationem non deleniti obcaecati ipsam atque optio magni, enim distinctio quisquam?
 
 
 \chapter{Conclusão}
@@ -511,7 +524,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
 %---------------------------------------------------------------------
-%\phantompart
+\phantompart
 \printindex
 %---------------------------------------------------------------------
 
