@@ -12,7 +12,6 @@
 *.ilg
 *.ind
 *.lof
-*.log
 *.lot
 *.toc
 *.synctex.gz
