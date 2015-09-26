@@ -11,6 +11,7 @@
     %section=TITLE,     % títulos de seções convertidos em letras maiúsculas
     %subsection=TITLE,  % títulos de subseções convertidos em letras maiúsculas
     %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+    %subsubsubsection=TITLE,% títulos de subsubsubseções convertidos em letras maiúsculas
     % -- opções do pacote babel --
     english,            % idioma adicional para hifenização
     spanish,            % idioma adicional para hifenização
@@ -27,7 +28,7 @@
 \usepackage[utf8]{inputenc}     % Codificacao do documento (conversão automática dos acentos)
 \usepackage{lastpage}           % Usado pela Ficha catalográfica
 \usepackage{indentfirst}        % Indenta o primeiro parágrafo de cada seção.
-\usepackage{color,xcolor}              % Controle das cores
+\usepackage{color,xcolor}       % Controle das cores
 \usepackage{graphicx}           % Inclusão de gráficos
 \usepackage{microtype}          % para melhorias de justificação
 \usepackage{booktabs}
@@ -35,7 +36,7 @@
 \usepackage{caption}
 \usepackage{soul}
 \usepackage{rotating}
-%% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
+
 \renewenvironment{quotation}%
   {%
    \small
@@ -47,7 +48,7 @@
        \setlength{\parsep}{0pt}}%
     \item\relax}%
   {\end{list}}
-%% Documento gerado com FastFormat. Copyright 2015 http://www.fastformat.co/
+
 \let\newfloat\undefined
 \usepackage{floatrow}
 
@@ -63,9 +64,6 @@
 
 % ---
 
-% ---
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
-% ---
 
 
 % ---
@@ -75,11 +73,15 @@
 \usepackage[brazilian,hyperpageref]{backref}     % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}   % Citações padrão ABNT
 
+% ---
+% Redefinição do comando duplo quote e quote simples
+% ---
+\newcommand\dblquote[1]{\textquotedblleft #1\textquotedblright}
+\newcommand\sglquote[1]{\textquoteleft #1\textquoteright}
 
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
-
 
 % ---
 % Configurações do pacote backref
@@ -129,7 +131,7 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{ESTUDO DE COMO METODOLOGIAS ÁGEIS ATENDEM BOAS PRÁTICAS DE GERENCIAMENTO DE PROJETOS DE SOFTWARE}
+\titulo{Estudo de como metodologias ágeis atentem boas práticas de gerenciamento de projetos de Software}
 
 \autor{Bruno Fernandes}
 \local{Maringá}
@@ -416,7 +418,7 @@
 Desenvolvimento de software não é uma tarefa trivial, portanto é importante que se faça um gerenciamento do projeto de desenvolvimento para que o produto final tenha qualidade. Planejar e controlar projetos de software é a única forma conhecida de se gerir a complexidade dos projetos de software \cite[p.~484]{pressman2006}.
 
 
-O \citeonline{chaos2013}, através do relatório Chaos, define algumas características para projetos bem sucedidos, e são elas: projeto finalizado dentro do prazo, dentro do orçamento e contemplando todas as funcionalidades inicialmente especificadas. Neste contexto, a gerência de projetos se caracteriza como uma atividade fundamental para obtenção da qualidade do produto de software e do seu sucesso.
+O \citeonline{standish2013}, através do relatório Chaos, define algumas características para projetos bem sucedidos, e são elas: projeto finalizado dentro do prazo, dentro do orçamento e contemplando todas as funcionalidades inicialmente especificadas. Neste contexto, a gerência de projetos se caracteriza como uma atividade fundamental para obtenção da qualidade do produto de software e do seu sucesso.
 
 
 O PMBOK\index{PMBOK} é um conjunto de boas práticas de gerência de projetos consolidado e aceito internacionalmente, porém, atualmente tem sido notável a utilização de outras metodologias para gerência de projetos de software, conhecidas como metodologias ágeis. Estes modelos ditos ágeis priorizam o valor agregado e as interações entre as pessoas do que o cumprimento de prazos custo ou atendimento ao escopo inicial \cite[p.~xxi]{prikladnickiAtAll}.
@@ -426,20 +428,25 @@ O presente trabalho busca responder a questão de se as metodologias ágeis, par
 
 
 
-\chapter{REFERENCIAL TEÓRICO}
+\chapter{Referencial Teórico}
 
-\section{CONCEITOS BÁSICOS DE GERÊNCIA DE PROJETO DE SOFTWARE}
+\section{Gerenciamento de projeto de software}
 
-De acordo com o \citeonline{pmi2013}, projeto é \textquotedblleft{}um esforço temporário empreendido para criar um produto, serviço ou resultado único\textquotedblright{}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes (RUP, 2002). Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consomem recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}.
-
-
-Segundo \citeonline[p.~5]{grayLarson2009}, o maior objetivo de um projeto de software é a satisfação de um cliente. Mas existem 5 principais características de um projeto, que o diferencia de outros esforços de uma organização: Projetos tem um objetivo estabelecido, um período de validade definido, geralmente conta com o envolvimento de diversos departamentos e profissionais, comumente é para a elaboração de algo nunca antes realizado, e possui tempo, custo e requerimentos de desempenho específicos.
+De acordo com o \textit{Project Management Institute} \cite{pmi2013}, projeto é \dblquote{um esforço temporário empreendido para criar um produto, serviço ou resultado único}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes. Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consome recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}. É importante salientar, também, o que não é um projeto. \dblquote{Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo} \cite[p.~6]{grayLarson2009}.
 
 
-É importante salientar, também, o que não é um projeto. \textquotedblleft{}Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo\textquotedblright{} \cite[p.~6]{grayLarson2009}.
+Segundo \citeonline[p.~5]{grayLarson2009}, o maior objetivo de um projeto de software, assim como a maioria dos esforços de uma organização, é a satisfação de um cliente. Mas existem 5 principais características de um projeto, que o diferencia de outros esforços da Organização: 
+
+\begin{alineas}
+	\item possui objetivo estabelecido
+	\item possui período de validade definido
+	\item geralmente conta com o envolvimento de diversos departamentos e profissionais
+	\item comumente é para a elaboração de algo nunca antes realizado
+	\item possui tempo, custo e requerimentos de desempenho específicos
+\end{alineas}
 
 
-Gerenciamento de projetos é, segundo o PMBOK (PMI, 2013), \textquotedblleft{}a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos\textquotedblright{}. Gerenciamento de projetos também é um estilo de administração orientado a resultados que premia a criação de relacionamentos colaborativos entre as diferentes pessoas de uma equipe \cite[p.~3]{grayLarson2009}.
+Para que o projeto obtenha sucesso é preciso que haja um acompanhamento, ou gerenciamento do projeto. Segundo o PMBOK (PMI, 2013), Gerenciamento de Projetos é \dblquote{a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos}. Gerenciamento de projetos também é um estilo de administração orientado a resultados que premia a criação de relacionamentos colaborativos entre as diferentes pessoas de uma equipe \cite[p.~3]{grayLarson2009}.
 
 
 
