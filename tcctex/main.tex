@@ -430,11 +430,11 @@ Diante do cenário apresentado, surge a questão de como as práticas de gerênc
 
 \section{Conceitos Básicos}
 
-\subsection{Projeto de desenvolvimento de software}
+\subsection{Gerenciamento de projetos de software}
 
 De acordo com o \textit{Project Management Institute} \cite{pmi2013}, projeto\index{Projeto} é \dblquote{um esforço temporário empreendido para criar um produto, serviço ou resultado único}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes. Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consome recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}. É importante salientar, também, o que não é um projeto. \dblquote{Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo} \cite[p.~6]{grayLarson2009}.
 
-Segundo \citeonline[p.~5]{grayLarson2009}, o maior objetivo de um projeto de software, assim como a maioria dos esforços de uma organização, é a satisfação de um cliente. Mas existem 5 principais características de um projeto, que o diferencia de outros esforços da Organização: 
+Segundo \citeonline[p.~5]{grayLarson2009}, o maior objetivo de um projeto de desenvolvimento de software, assim como a maioria dos esforços de uma organização, é a satisfação de um cliente. Mas existem 5 principais características de um projeto, que o diferencia de outros esforços da Organização: 
 
 \begin{alineas}
 	\item possui objetivo estabelecido;
@@ -453,18 +453,23 @@ No Brasil existem dois termos parecidos, mas com sentidos diferentes e que não 
 
 O primeiro é o \textit{Software Design}, em inglês, ou seja, é um processo iterativo por meio do qual os requisitos são traduzidos em um \dblquote{documento} para construção do software. O segundo vem do inglês \textit{Project}, que é de fato o esforço para criação de um produto, serviço ou resultado único. Projeto (\textit{Project}) não está relacionado apenas a Softwares. Podem ser aplicados às várias áreas de conhecimento humano \cite{pressman2006}.
 
-\subsection{Gerenciamento de projetos de software}
-
 Para que um projeto obtenha sucesso é altamente recomendado que haja um acompanhamento, ou gerenciamento do projeto. Segundo o \citeonline{pmi2013}, Gerenciamento de Projetos é \dblquote{a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos}. Gerenciamento de projetos também é um estilo de administração orientado a resultados que premia a criação de relacionamentos colaborativos entre as diferentes pessoas de uma equipe \cite[p.~3]{grayLarson2009}.
 
 Para \citeonline[p.~11]{Cruz2013}, a obtenção do objetivo é alcançada quando o gerenciamento de projetos contempla pelo menos os seguintes itens:
 
 \begin{alineas}
 	\item identificação dos requisitos;
-	\item adaptação às diferentes expectativas das partes e às mudanças ao longo do ciclo de vida;
+	\item adaptação às diferentes expectativas das partes e às mudanças ao longo do ciclo de vida; e
 	\item balanceamento adequado às restrições do projeto (Escopo, Qualidade, Cronograma, Orçamento, Recursos e Riscos).
 \end{alineas}
 
+Apesar dos conceitos acima se aplicarem a projetos de diversas áreas, projetos de desenvolvimento de software possuem algumas características distintas de outros projetos que podem fazer com que esse seja particularmente desafiador. Segundo \citeonline[p.~60]{sommerville2011}, algumas dessas diferenças são:
+
+\begin{alineas}
+	\item O produto é intangível. O software não pode ser visto ou tocado, deste modo, não há como o gerente de projetos saber o progresso do projeto apenas olhando para o artefato que está sendo construído.
+	\item Geralmente, os grandes projetos de softwares são diferentes dos projetos anteriores em algum aspecto. Somando-se a isto o fato da tecnologia em computadores evoluir muito rapidamente, mesmo gerentes de projetos com grande experiência podem achar difícil antecipar problemas e transferir lições aprendidas para novos projetos.
+	\item Os processos de software são variáveis e de organização específica. Embora tenhamos tido grande progresso na padronização e melhorias dos processo, ainda não podemos dizer com certeza quando um processo irá levar a problemas de desenvolvimento, principalmente quando o projeto de software faz parte de um projeto de engenharia de sistemas mais amplo.
+\end{alineas}
 
 
 \subsection{Gerente de Projetos}
@@ -496,8 +501,10 @@ Ainda segundo o \citeonline{pmi2013}, o gerente de projetos deve possuir uma com
 
 Para \citeonline[p.~9]{kerzner2011}, dentre as habilidades desejadas para o Gerente de Projetos, as mais importantes não são as habilidades técnicas, mas sim as pessoais. O Gerente de projetos precisa conhecer sobre psicologia, comportamento humano e organizacional, relacionamento interpessoal e comunicação. Os Gerentes de projetos geralmente possuem grandes responsabilidades, mas pouca autoridade. Assim, precisam estar sempre negociando com a alta administração e gerências funcionais.
 
+O trabalho do Gerente de projetos varia bastante, de acordo com a organização e o produto que está sendo desenvolvido. Mas para \citeonline{sommerville2011}, a maioria dos gerentes de projetos assumem, em algum momento, responsabilidade por algumas atividades bases comuns. O planejamento do projeto é uma destas atividades, onde o gerente deve garantir que o trabalho esteja sendo feito conforme os padrões e devendo acompanhar o progresso para garantir que o desenvolvimento está no prazo e dentro do orçamento. Também é responsável por fazer a ponte entre o desenvolvimento e os clientes e gerentes da empresa, mostrando o andamento do projeto de forma concisa e coerente, abstraindo as informações mais técnicas. Os gerenciamentos de riscos e pessoas são outras atividades desempenhadas em algum momento pelos gerentes de projetos. Eles devem ser capazes de avaliar e controlar os riscos que podem afetar o projeto e agir quando necessário, bem como estabelecer formas de trabalho que levem a um desempenho eficaz da equipe. Por fim, os gerentes devem ser capazes de elaborar propostas, descrevendo os objetivos do projeto e como ele será realizado, visando ganhar um contrato para executar um item de trabalho.
+
 \subsection{Ciclo de vida do projeto}
-Segundo \apudonline{pmi2013}{Cruz2013}, ciclo de vida do projeto é a serie de fases pelas quais o projeto passa, desde seu início até o término. As etapas entre a inicialização e a finalização do projeto podem ser sequenciais, iterativas ou sobrepostas e estas etapas são definidas ou moldadas conforme a necessidade de gerenciamento da organização. Independentemente dos moldes utilizados pelas empresas, todos os projetos possuem início e fim definidos e as fases podem ser desmembradas em entregas ou resultados intermediários.
+Para compreender o gerenciamento de projetos é importante conhecer seu ciclo de vida. Segundo o \citeonline{pmi2013}, ciclo de vida do projeto é a serie de fases pelas quais o projeto passa, desde seu início até o término. As etapas entre a inicialização e a finalização do projeto podem ser sequenciais, iterativas ou sobrepostas e estas etapas são definidas ou moldadas conforme a necessidade de gerenciamento da organização. Independentemente dos moldes utilizados pelas empresas, todos os projetos possuem início e fim definidos e as fases podem ser desmembradas em entregas ou resultados intermediários.
 
 Apesar de variar em tamanho e complexidade, todos os projetos podem ser mapeados para a estrutura de ciclo de vida a seguir \cite{pmi2013}:
 
@@ -508,6 +515,8 @@ Apesar de variar em tamanho e complexidade, todos os projetos podem ser mapeados
 	\item encerramento do projeto;
 \end{alineas}
 
+A estrutura acima pode ser ilustrado pela figura abaixo:
+
 \begin{figure}[htb]
 \RawFloats
 	\caption{\label{fig_ciclo_vida_projeto}Ciclo de vida de projetos (estrutura básica)}
@@ -517,13 +526,7 @@ Apesar de variar em tamanho e complexidade, todos os projetos podem ser mapeados
 	\legend{Fonte: \cite[p.~13]{Cruz2013}}
 \end{figure}
 
-%\begin{figure}[htb]
-%	\centering
-%	  \includegraphics[scale=0.50]{figuras/ciclo_vida_projeto.png}
-%	  \caption{Ciclo de vida de projetos (estrutura básica)}
-%	  \label{fig_ciclo_vida_projeto}
-%	\legend{Fonte: \cite[p.~13]{Cruz2013}}
-%\end{figure}
+
 
 
 \chapter{Metodologia}
