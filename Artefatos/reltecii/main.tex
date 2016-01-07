@@ -4,7 +4,7 @@
     % -- opções da classe memoir --
     12pt,               % tamanho da fonte
     openright,          % capítulos começam em pág ímpar (insere página vazia caso preciso)
-    twoside,            % para impressão em verso e anverso. Oposto a % oneside
+    oneside,            % para impressão em verso e anverso. Oposto a % oneside
     a4paper,            % tamanho do papel. 
     % -- opções da classe abntex2 --
     chapter=TITLE,     % títulos de capítulos convertidos em letras maiúsculas
@@ -210,49 +210,13 @@
 % Folha de rosto
 % (o * indica que haverá a ficha catalográfica)
 % ---
-\label{folha rosto}
-\imprimirfolhaderosto*
+%\label{folha rosto}
+%\imprimirfolhaderosto*
 % ---
 
 % ---
 % Inserir a ficha catalográfica
 % ---
-\label{ficha catalografica}
-\begin{fichacatalografica}
-	\sffamily
-  \vspace*{10cm} 		% Posição vertical
-  \hrule				% Linha horizontal
-  \begin{center}		% Minipage Centralizado
-  \begin{minipage}[c]{12.5cm} % Largura
-
-  \imprimirautor
-
-  \hspace{0.5cm} \imprimirtitulo / \imprimirautor. --
-  \imprimirlocal, \imprimirdata-
-  
-  \hspace{0.5cm} \pageref{LastPage} p. : il.(alguma color.); 30 cm.\\
-
-  \hspace{0.5cm} \imprimirorientadorRotulo ~\imprimirorientador\\
-
-\hspace{0.5cm}
-\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-\imprimirdata.}\\
-
-  \hspace{0.5cm}
-	1. Palavra-chave1.
-	2. Palavra-chave2.
-	I. Orientador.
-	II. Universidade xxx.
-	III. Faculdade de xxx.
-	IV. Título\\
-	
-  \hspace{8.75cm} CDU 02:141:005.7\\
-  
-  \end{minipage}
-  \end{center}
-  \hrule
-  \newpage
-\end{fichacatalografica}
 % ---
 
 % ---
@@ -289,41 +253,6 @@
 % Inserir folha de aprovação
 % Substituir por versão digitalizada ao finalizar o TCC
 % ---
-\label{folha aprovação}
-\begin{folhadeaprovacao}
-
-  \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-     \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-    \end{center} 
-    \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
-    \end{minipage}%
-    \vspace*{\fill}
-   \end{center}
-    
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2015:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   \assinatura{\textbf{Professor} \\ Convidado 3}
-      
-   \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-  
-\end{folhadeaprovacao}
 % ---
 
 % ---
@@ -364,9 +293,9 @@
 % inserir lista de ilustrações
 % ---
 \label{lista ilustrações}
-  \pdfbookmark[0]{\listfigurename}{lof}
-  \listoffigures*
-  \cleardoublepage
+%  \pdfbookmark[0]{\listfigurename}{lof}
+%  \listoffigures*
+%  \cleardoublepage
 
 % ---
 
@@ -374,9 +303,9 @@
 % inserir lista de tabelas
 % ---
 \label{lista tabelas}
-  \pdfbookmark[0]{\listtablename}{lot}
-  \listoftables*
-  \cleardoublepage
+%  \pdfbookmark[0]{\listtablename}{lot}
+%  \listoftables*
+%  \cleardoublepage
 
 % ---
 
@@ -384,11 +313,11 @@
 % inserir lista de abreviaturas e siglas
 % ---
 \label{lista siglas}
-\begin{siglas}
-	\item[PMBOK] Project Management Body of Knowledge
-	\item[PMI] Project Management Institute
-	\item[ABNT] Associação Brasileira de Normas Técnicas
-\end{siglas}
+%\begin{siglas}
+%	\item[PMBOK] Project Management Body of Knowledge
+%	\item[PMI] Project Management Institute
+%	\item[ABNT] Associação Brasileira de Normas Técnicas
+%\end{siglas}
 
 % ---
 % inserir lista de símbolos
@@ -413,22 +342,32 @@
 \textual
 
 
-\chapter{Introdução}
+\chapter{Atividades Desenvolvidas}
 
-Desenvolvimento de software não é uma tarefa trivial, portanto é importante que se faça um gerenciamento do projeto de desenvolvimento para que o produto final tenha qualidade. Planejar e controlar projetos de software é a única forma conhecida de se gerir a complexidade dos projetos de software \cite[p.~484]{pressman2006}.
+No início foi definido o orientador que ajudaria na condução do presente trabalho. Após algumas reuniões, o tema foi ficando um pouco mais claro e foi iniciado o desenvolvimento do trabalho. Foi realizada uma pesquisa bibliográfica, levando em considerações autores com grande conhecimento de gerenciamento de projetos e de engenharia de software. Alguns autores foram considerados pelo grande conhecimento em gerência de projetos, mesmo não atuando na área de engenharia de software, como é o caso do \citeonline{kerzner2011} e do próprio \citeonline{pmi2013}. O projeto do TCC foi realizado e entregue ao orientador e aos membros da banca. A revisão bibliográfica ainda está sendo desenvolvida. 
 
+\chapter{Resultado obtidos e dificuldades encontradas}
+Uma das grandes dificuldades encontradas foi com relação à formatação do trabalho conforme as normas ABNT. No início, foi experimentada a ferramenta Microsoft Word como editor de texto padrão. Porém, com o uso desta ferramenta, foi percebido que estava sendo disperso muito tempo com a formatação e pouco tempo com o conteúdo do trabalho. Assim, foi avaliada a possibilidade e decidido que seria melhor usar uma ferramenta que apoiasse na formatação das regras ABNT. Com o uso do compilador \LaTeX ~e a classe ABNTEX2, sendo usados no editor Texmaker, foi obtida significativa melhora no tempo de formatações, citações e listagem de bibliografias.
 
-O \citeonline{standish2013}, através do relatório Chaos, define algumas características para projetos bem sucedidos, e são elas: projeto finalizado dentro do prazo, dentro do orçamento e contemplando todas as funcionalidades inicialmente especificadas. Neste contexto, a gerência de projetos se caracteriza como uma atividade fundamental para obtenção da qualidade do produto de software e do seu sucesso.
+\begin{figure}[htb]
+\RawFloats
+	\caption{Editor Texmaker para \LaTeX} \label{fig:texmaker}
+	\begin{center}
+	    \includegraphics[scale=0.35]{figuras/texmaker.png}
+	\end{center}
+\end{figure}
 
+Outra dificuldade encontrada é com a revisão bibliográfica. O Assunto de gerenciamento de projetos é extenso, bem como o Guia PMBOK. Está sendo difícil selecionar partes que serão mais relevantes para a comparação com metodologias ágeis, já que o PMBOK é bem detalhado, contrastando com as metodologias ágeis que apontam uma ideia mas não explana de forma detalhada o \dblquote{como} fazer.
 
-O PMBOK\index{PMBOK} é um conjunto de boas práticas de gerência de projetos consolidado e aceito internacionalmente, porém, atualmente tem sido notável a utilização de outras metodologias para gerência de projetos de software, conhecidas como metodologias ágeis. Estes modelos ditos ágeis priorizam o valor agregado e as interações entre as pessoas do que o cumprimento de prazos custo ou atendimento ao escopo inicial \cite[p.~xxi]{prikladnickiAtAll}.
+\chapter{Avaliação do cronograma de execução}
 
-Diante do cenário apresentado, surge a questão de como as práticas de gerência, orientadas por métodos ágeis, atendem a boas práticas de gerência de projeto, tais como as indicadas pelo PMBOK\index{PMBOK}, que são reconhecidas internacionalmente pela sua eficiência. Assim, o presente trabalho busca responder a esta questão, por meio de um mapeamento  entre as práticas e sua análise. Com isso, pretende-se contribuir na escolha de uma metodologia ágil que melhor atenda a boas práticas de gerência de projetos, mostrando o seu nível de atendimento.
-
+Considerando o cronograma inicial o projeto do trabalho está atrasado, pois deveriam estar sendo colhidos os resultados da comparação entre as metodologias. As atividades que ainda precisam ser realizadas são: a finalização da revisão bibliográfica, coleta dos dados e comparação entre metodologias ágeis e o guia PMBOK, conclusão da redação da monografia, revisão e entrega.
 
 \chapter{Referencial Teórico}
 
-\section{Gerenciamento de projetos de software}
+\section{Conceitos Básicos}
+
+\subsection{Gerenciamento de projetos de software}
 
 De acordo com o \textit{Project Management Institute} \cite{pmi2013}, projeto\index{Projeto} é \dblquote{um esforço temporário empreendido para criar um produto, serviço ou resultado único}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes. Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consome recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}. É importante salientar, também, o que não é um projeto. \dblquote{Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo} \cite[p.~6]{grayLarson2009}.
 
@@ -470,7 +409,7 @@ Apesar dos conceitos acima se aplicarem a projetos de diversas áreas, projetos 
 \end{alineas}
 
 
-\section{Gerente de Projetos}
+\subsection{Gerente de Projetos}
 O gerente de projetos é a pessoa designada para liderar a equipe responsável por alcançar os objetivos do projeto \cite[p.~16]{pmi2013}. Segundo \citeonline[p.~485]{pressman2006} o Gerente de projetos é responsável por planejar, motivar, organizar e controlar os profissionais que fazem o trabalho de software.
 
 Segundo o \citeonline{pmi2013} para que o gerente de projetos seja eficiente e eficaz, além de possuir habilidades na área específica do projeto em que está atuando, é desejável que também possua as seguintes competências:
@@ -501,7 +440,7 @@ Para \citeonline[p.~9]{kerzner2011}, dentre as habilidades desejadas para o Gere
 
 O trabalho do Gerente de projetos varia bastante, de acordo com a organização e o produto que está sendo desenvolvido. Mas para \citeonline{sommerville2011}, a maioria dos gerentes de projetos assumem, em algum momento, responsabilidade por algumas atividades bases comuns. O planejamento do projeto é uma destas atividades, onde o gerente deve garantir que o trabalho esteja sendo feito conforme os padrões e devendo acompanhar o progresso para garantir que o desenvolvimento está no prazo e dentro do orçamento. Também é responsável por fazer a ponte entre o desenvolvimento e os clientes e gerentes da empresa, mostrando o andamento do projeto de forma concisa e coerente, abstraindo as informações mais técnicas. Os gerenciamentos de riscos e pessoas são outras atividades desempenhadas em algum momento pelos gerentes de projetos. Eles devem ser capazes de avaliar e controlar os riscos que podem afetar o projeto e agir quando necessário, bem como estabelecer formas de trabalho que levem a um desempenho eficaz da equipe. Por fim, os gerentes devem ser capazes de elaborar propostas, descrevendo os objetivos do projeto e como ele será realizado, visando ganhar um contrato para executar um item de trabalho.
 
-\section{Ciclo de vida do projeto}
+\subsection{Ciclo de vida do projeto}
 Para compreender o gerenciamento de projetos é importante conhecer seu ciclo de vida. Segundo o \citeonline[p.~38]{pmi2013}, ciclo de vida do projeto é a serie de fases pelas quais o projeto passa, desde seu início até o término. As etapas entre a inicialização e a finalização do projeto podem ser sequenciais, iterativas ou sobrepostas e estas etapas são definidas ou moldadas conforme a necessidade de gerenciamento da organização. Independentemente dos moldes utilizados pelas empresas, todos os projetos possuem início e fim definidos e as fases podem ser desmembradas em entregas ou resultados intermediários.
 
 Apesar de variar em tamanho e complexidade, todos os projetos podem ser mapeados para a estrutura de ciclo de vida a seguir \cite[p.~39]{pmi2013}:
@@ -526,7 +465,7 @@ A estrutura acima e seu desenvolvimento ao londo do tempo pode ser ilustrada pel
 
 A partir desta estrutura básica, o projeto pode ser dividido em fases, que irão proporcionar benefícios ao trabalho que será feito para se atingir os objetivos do projeto. O ciclo de vida de projetos possuem cinco fases claras, segundo o PMBOK. Estas fases, também chamadas Grupos de Processos, são bem definidas e sequenciais, possuem passos a serem executados e são conhecidas por Iniciação, Planejamento, Execução, Monitoramento e Controle e Encerramento \cite[p.~14]{Cruz2013}. 
 
-A Figura~\ref{fig:grupo_processos} mostra a interação entre cada um dos grupos de processo ao longo do ciclo de vida do projeto e o esforço empreendido, onde as curvas mais acentuadas denotam maior importância no período \cite[p.~15]{Rafael2012}. 
+A Figura~\ref{fig:grupo_processos} mostra o esforço necessário em cada grupo de processo ao longo do ciclo de vida do projeto e a sobreposição entre os grupos.
 
 \begin{figure}[htb]
 \RawFloats
@@ -537,58 +476,20 @@ A Figura~\ref{fig:grupo_processos} mostra a interação entre cada um dos grupos
 	\legend{Fonte: \cite[p.~51]{pmi2013}}
 \end{figure}
 
-\subsection{Iniciação}
+\subsubsection{Iniciação}
 A fase de inicialização do projeto é quando a autorização para o início de um novo projeto, ou nova fase de um projeto é obtida, o escopo inicial é definido, os recursos financeiros iniciais são comprometidos, os interessados internos e externos são identificados e o Gerente de projeto é definido. O objetivo principal desta fase é alinhar as expectativas das partes interessadas com os objetivos do projeto, dar-lhes visibilidade sobre o escopo e objetivos, e mostrar como a sua participação no projeto irá contribuir para que as expectativas sejam atingidas \cite[p.~54]{pmi2013}.
 
-\subsection{Planejamento}
+\subsubsection{Planejamento}
 Neste grupo de processos estão os processos realizados para estabelecer o escopo, definir e refinar objetivos e desenvolver o curso de ações necessário para se atingir estes objetivos. O principal benefício deste grupo de processos é delinear a estratégia e a tática, e também o caminho para a conclusão do projeto com sucesso. O planejamento explorará as seguintes áreas apresentadas no Guia PMBOK: escopo, tempo, qualidade, comunicações, recursos humanos, riscos, aquisições e gerenciamento das partes interessadas \cite[p.~55]{pmi2013}.
 
-\subsection{Execução}
+\subsubsection{Execução}
 Este grupo consiste dos processos executados para se concluir o trabalho definido no plano de gerenciamento do projeto. Este grupo também envolve coordenar a equipe e recursos, e gerenciar as expectativas das partes interessadas. Durante a execução do projeto podem surgir alterações com relação ao planejado e podem surgir riscos não esperados. Estas alterações são analisadas e, se necessário, o plano se de gerenciamento é alterado \cite[p.~55]{pmi2013}.
 
-\subsection{Monitoramento e Controle}
+\subsubsection{Monitoramento e Controle}
 O grupo de monitoramento e controle consiste dos processos necessários para acompanhar e analisar o andamento e o desempenho do projeto. O principal benefício deste grupo é a medição e análise do desempenho do projeto com o objetivo de identificar variações no plano de gerenciamento do projeto. Este controle fornece à equipe uma visão melhor do andamento do projeto e identifica as áreas que precisam de mais atenção \cite[p.~55]{pmi2013}.
 
-\subsection{Encerramento}
+\subsubsection{Encerramento}
 Os processos deste grupo tem a finalidade de encerrar todas as atividades de todos os grupos de processos de gerenciamento do projeto, assim finalizado formalmente o projeto, as fases ou as obrigações contratuais. Este grupo de processo verifica se os processos definidos estão completos em todos os grupos de processos. Este grupo também formaliza encerramentos prematuros do projeto, como por exemplo, projetos abortados \cite[p.~55]{pmi2013}.
-
-
-\section{Gerenciamento ágil de projetos de software}
-
-
-
-\chapter{Metodologia}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-Delectus expedita iusto, corporis veniam unde. Beatae nulla minus quo deleniti dolores velit, aut voluptatibus a, qui dignissimos aliquid pariatur obcaecati alias repudiandae? Excepturi ut atque ipsum culpa neque enim laboriosam necessitatibus saepe ad eum, vel ipsum iusto necessitatibus assumenda pariatur facere dolores modi neque facilis, hic velit facilis? Officia numquam facere deleniti aperiam laborum recusandae, error ipsum officia distinctio natus sit tempore consequatur nemo placeat, quibusdam ullam minima ducimus incidunt inventore corrupti laboriosam, quae libero tempore inventore totam expedita reiciendis.
-
-
-
-\chapter{Resultados}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-Quasi autem laborum nobis laboriosam modi, ipsum corporis debitis illo libero voluptatem deserunt minus totam aperiam, placeat dolor maiores impedit est fuga saepe. Distinctio sit cum commodi eum quisquam asperiores nisi explicabo, libero nobis iste natus, voluptatibus quasi debitis illum voluptatum molestiae magni porro doloribus unde tempore. Numquam sint nam debitis corporis exercitationem? Sed reprehenderit dolor quae esse ipsa vero fugiat expedita inventore non, hic obcaecati illum odit corrupti mollitia ad velit assumenda ratione natus nulla, perferendis dignissimos animi, perspiciatis enim pariatur possimus eaque?
-
-
-Ea molestias harum illum nobis molestiae cumque quidem optio, quo veniam dolore perspiciatis nesciunt deserunt doloremque nisi commodi nam, deleniti doloremque optio dolorem possimus velit nostrum amet, voluptate soluta nesciunt hic? Libero omnis est fugit soluta iste, ut tempora nesciunt dignissimos distinctio esse id sit, nam asperiores enim facere laudantium vitae fuga ut nulla omnis ab nisi? Tempore ducimus assumenda commodi deleniti placeat officia optio perspiciatis, placeat excepturi amet magni facilis autem officiis eius explicabo saepe nemo, esse nobis ipsam cum ipsa sit recusandae dignissimos quis cumque earum, laudantium quae soluta officiis incidunt quia consequuntur quidem explicabo sunt illo? Saepe aliquid obcaecati vitae iusto voluptate quod aut illo ex a, natus nisi exercitationem non deleniti obcaecati ipsam atque optio magni, enim distinctio quisquam?
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-Quasi autem laborum nobis laboriosam modi, ipsum corporis debitis illo libero voluptatem deserunt minus totam aperiam, placeat dolor maiores impedit est fuga saepe. Distinctio sit cum commodi eum quisquam asperiores nisi explicabo, libero nobis iste natus, voluptatibus quasi debitis illum voluptatum molestiae magni porro doloribus unde tempore. Numquam sint nam debitis corporis exercitationem? Sed reprehenderit dolor quae esse ipsa vero fugiat expedita inventore non, hic obcaecati illum odit corrupti mollitia ad velit assumenda ratione natus nulla, perferendis dignissimos animi, perspiciatis enim pariatur possimus eaque?
-
-
-Ea molestias harum illum nobis molestiae cumque quidem optio, quo veniam dolore perspiciatis nesciunt deserunt doloremque nisi commodi nam, deleniti doloremque optio dolorem possimus velit nostrum amet, voluptate soluta nesciunt hic? Libero omnis est fugit soluta iste, ut tempora nesciunt dignissimos distinctio esse id sit, nam asperiores enim facere laudantium vitae fuga ut nulla omnis ab nisi? Tempore ducimus assumenda commodi deleniti placeat officia optio perspiciatis, placeat excepturi amet magni facilis autem officiis eius explicabo saepe nemo, esse nobis ipsam cum ipsa sit recusandae dignissimos quis cumque earum, laudantium quae soluta officiis incidunt quia consequuntur quidem explicabo sunt illo? Saepe aliquid obcaecati vitae iusto voluptate quod aut illo ex a, natus nisi exercitationem non deleniti obcaecati ipsam atque optio magni, enim distinctio quisquam?
-
-
-\chapter{Conclusão}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 
 
 % ----------------------------------------------------------
@@ -601,7 +502,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 % Referências bibliográficas
 % ----------------------------------------------------------
 \bibliography{references}
-
 
 
 % ----------------------------------------------------------
