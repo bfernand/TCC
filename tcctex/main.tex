@@ -385,9 +385,11 @@
 % ---
 \label{lista siglas}
 \begin{siglas}
+	\item[ABNT] Associação Brasileira de Normas Técnicas
+	\item[MPEs] Micro e Pequenas Empresas
 	\item[PMBOK] Project Management Body of Knowledge
 	\item[PMI] Project Management Institute
-	\item[ABNT] Associação Brasileira de Normas Técnicas
+
 \end{siglas}
 
 % ---
@@ -415,22 +417,39 @@
 
 \chapter{Introdução}
 
-Desenvolvimento de software não é uma tarefa trivial, portanto é importante que se faça um gerenciamento do projeto de desenvolvimento para que o produto final tenha qualidade. Planejar e controlar projetos de software é a única forma conhecida de se gerir a complexidade dos projetos de software \cite[p.~484]{pressman2006}.
-
+Desenvolvimento de software não é uma tarefa trivial, principalmente se envolver muitas pessoas trabalhando por um tempo relativamente longo. Por isto é importante que se faça um gerenciamento do projeto de desenvolvimento para que o produto final seja entregue com qualidade, no prazo e dentro do orçamento \cite[p.~555]{pressman2011}.
 
 O \citeonline{standish2013}, através do relatório Chaos, define algumas características para projetos bem sucedidos, e são elas: projeto finalizado dentro do prazo, dentro do orçamento e contemplando todas as funcionalidades inicialmente especificadas. Neste contexto, a gerência de projetos se caracteriza como uma atividade fundamental para obtenção da qualidade do produto de software e do seu sucesso.
 
+Para guiar o gerente de projetos no ciclo de vida do projeto, foi criado o PMBOK\index{PMBOK}, que é um conjunto de boas práticas de gerência de projetos consolidado e que hoje é aceito internacionalmente. Porém, atualmente tem sido notável a utilização de outras metodologias para gerência de projetos de software, conhecidas como metodologias ágeis. Estes modelos ditos ágeis priorizam o valor agregado e as interações entre as pessoas do que o cumprimento de prazos custo ou atendimento ao escopo inicial \cite[p.~xxi]{prikladnickiAtAll}.
 
-O PMBOK\index{PMBOK} é um conjunto de boas práticas de gerência de projetos consolidado e aceito internacionalmente, porém, atualmente tem sido notável a utilização de outras metodologias para gerência de projetos de software, conhecidas como metodologias ágeis. Estes modelos ditos ágeis priorizam o valor agregado e as interações entre as pessoas do que o cumprimento de prazos custo ou atendimento ao escopo inicial \cite[p.~xxi]{prikladnickiAtAll}.
+As micro e pequenas empresas (MPEs) são uma parcela significativa das empresas nacionais, representando 91,2\% das empresas ativas no país \cite{ibpt2016}, porém, possuem restrições de recursos, já que as empresas enquadradas em micro e pequenas empresas são aquelas que tem faturamento bruto anual de até R\$ 3.600.000,00 \cite{brasil2006}. Esta categoria de empresas é grande usuária dos métodos ágeis e por suas limitações, possuem dificuldades para analisar se as práticas de gerência de projeto de metodologias ágeis são suficientes aos seus projetos.
 
 Diante do cenário apresentado, surge a questão de como as práticas de gerência, orientadas por métodos ágeis, atendem a boas práticas de gerência de projeto, tais como as indicadas pelo PMBOK\index{PMBOK}, que são reconhecidas internacionalmente pela sua eficiência. Assim, o presente trabalho busca responder a esta questão, por meio de um mapeamento  entre as práticas e sua análise. Com isso, pretende-se contribuir na escolha de uma metodologia ágil que melhor atenda a boas práticas de gerência de projetos, mostrando o seu nível de atendimento.
 
 
-\chapter{Referencial Teórico}
-
-\section{Gerenciamento de projetos de software}
+\chapter{Engenharia de Software com abordagem em gerência de projetos}
 
 De acordo com o \textit{Project Management Institute} \cite{pmi2013}, projeto\index{Projeto} é \dblquote{um esforço temporário empreendido para criar um produto, serviço ou resultado único}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes. Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consome recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}. É importante salientar, também, o que não é um projeto. \dblquote{Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo} \cite[p.~6]{grayLarson2009}.
+
+No Brasil existem dois termos parecidos, mas com sentidos diferentes e que não devem ser confundidos:
+
+\begin{alineas}
+	\item Projeto de Software;
+	\item Projeto de desenvolvimento de Software.
+\end{alineas}
+
+O primeiro é o \textit{Software Design}, em inglês, ou seja, é um processo iterativo por meio do qual os requisitos são traduzidos em um \dblquote{documento} para construção do software. O segundo, do qual se trata o presente trabalho, vem do inglês \textit{Project}, que é de fato o esforço para criação de um produto, serviço ou resultado único. Projeto (\textit{Project}) não está relacionado apenas a Softwares. Podem ser aplicados às várias áreas de conhecimento humano \cite{pressman2006}.
+
+Para que um projeto obtenha sucesso é altamente recomendado que haja um acompanhamento, ou gerenciamento do projeto. Segundo o \citeonline{pmi2013}, Gerenciamento de Projetos é \dblquote{a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos}. Gerenciamento de projetos também é um estilo de administração orientado a resultados que premia a criação de relacionamentos colaborativos entre as diferentes pessoas de uma equipe \cite[p.~3]{grayLarson2009}.
+
+Os conceitos acima se aplicam a projetos de diversas áreas, mas projetos de desenvolvimento de software podem ser definidos, também, como um esforço envolvendo planejamento monitoração e controle de pessoas, processos e eventos que ocorrendo à medida que o software evolui, desde os conceitos preliminares, até sua, completa e operacional, disponibilização \cite{pressman2011}. Projetos de desenvolvimento de software possuem algumas características distintas de outros projetos que podem fazer com que esse seja particularmente desafiador. Segundo \citeonline[p.~60]{sommerville2011}, algumas dessas diferenças são:
+
+\begin{alineas}
+	\item O produto é intangível. O software não pode ser visto ou tocado, deste modo, não há como o gerente de projetos saber o progresso do projeto apenas olhando para o artefato que está sendo construído.
+	\item Geralmente, os grandes projetos de softwares são diferentes dos projetos anteriores em algum aspecto. Somando-se a isto o fato da tecnologia em computadores evoluir muito rapidamente, mesmo gerentes de projetos com grande experiência podem achar difícil antecipar problemas e transferir lições aprendidas para novos projetos.
+	\item Os processos de software são variáveis e de organização específica. Embora tenhamos tido grande progresso na padronização e melhorias dos processo, ainda não podemos dizer com certeza quando um processo irá levar a problemas de desenvolvimento, principalmente quando o projeto de software faz parte de um projeto de engenharia de sistemas mais amplo.
+\end{alineas}
 
 Segundo \citeonline[p.~5]{grayLarson2009}, o maior objetivo de um projeto de desenvolvimento de software, assim como a maioria dos esforços de uma organização, é a satisfação de um cliente. Mas existem 5 principais características de um projeto, que o diferencia de outros esforços da Organização: 
 
@@ -442,17 +461,6 @@ Segundo \citeonline[p.~5]{grayLarson2009}, o maior objetivo de um projeto de des
 	\item possui tempo, custo e requerimentos de desempenho específicos.
 \end{alineas}
 
-No Brasil existem dois termos parecidos, mas com sentidos diferentes e que não devem ser confundidos:
-
-\begin{alineas}
-	\item Projeto de Software;
-	\item Projeto de desenvolvimento de Software.
-\end{alineas}
-
-O primeiro é o \textit{Software Design}, em inglês, ou seja, é um processo iterativo por meio do qual os requisitos são traduzidos em um \dblquote{documento} para construção do software. O segundo vem do inglês \textit{Project}, que é de fato o esforço para criação de um produto, serviço ou resultado único. Projeto (\textit{Project}) não está relacionado apenas a Softwares. Podem ser aplicados às várias áreas de conhecimento humano \cite{pressman2006}.
-
-Para que um projeto obtenha sucesso é altamente recomendado que haja um acompanhamento, ou gerenciamento do projeto. Segundo o \citeonline{pmi2013}, Gerenciamento de Projetos é \dblquote{a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos}. Gerenciamento de projetos também é um estilo de administração orientado a resultados que premia a criação de relacionamentos colaborativos entre as diferentes pessoas de uma equipe \cite[p.~3]{grayLarson2009}.
-
 Para \citeonline[p.~11]{Cruz2013}, a obtenção do objetivo é alcançada quando o gerenciamento de projetos contempla pelo menos os seguintes itens:
 
 \begin{alineas}
@@ -461,14 +469,17 @@ Para \citeonline[p.~11]{Cruz2013}, a obtenção do objetivo é alcançada quando
 	\item balanceamento adequado às restrições do projeto (Escopo, Qualidade, Cronograma, Orçamento, Recursos e Riscos).
 \end{alineas}
 
-Apesar dos conceitos acima se aplicarem a projetos de diversas áreas, projetos de desenvolvimento de software possuem algumas características distintas de outros projetos que podem fazer com que esse seja particularmente desafiador. Segundo \citeonline[p.~60]{sommerville2011}, algumas dessas diferenças são:
+Os fundamentos do gerenciamento ágil de software são o Manifesto Ágil e a Declaração de Interdependência.
+O manifesto ágil, como ficou conhecido, foi rascunhado em 2001 por um grupo de especialistas que disseram estar descobrindo maneiras melhores de desenvolver software valorizando os itens abaixo:
 
-\begin{alineas}
-	\item O produto é intangível. O software não pode ser visto ou tocado, deste modo, não há como o gerente de projetos saber o progresso do projeto apenas olhando para o artefato que está sendo construído.
-	\item Geralmente, os grandes projetos de softwares são diferentes dos projetos anteriores em algum aspecto. Somando-se a isto o fato da tecnologia em computadores evoluir muito rapidamente, mesmo gerentes de projetos com grande experiência podem achar difícil antecipar problemas e transferir lições aprendidas para novos projetos.
-	\item Os processos de software são variáveis e de organização específica. Embora tenhamos tido grande progresso na padronização e melhorias dos processo, ainda não podemos dizer com certeza quando um processo irá levar a problemas de desenvolvimento, principalmente quando o projeto de software faz parte de um projeto de engenharia de sistemas mais amplo.
-\end{alineas}
+\begin{citacao}
+\textbf{Indivíduos e interações} mais que processos e ferramentas \newline
+\textbf{Software em funcionamento} mais que documentação abrangente \newline
+\textbf{Colaboração com o cliente} mais que negociação de contratos \newline
+\textbf{Responder a mudanças} mais que seguir um plano \cite{manifesto2001}.
+\end{citacao}
 
+Porém, ao contrário do que muitos pensam, o desenvolvimento ágil não deve abandonar os itens à direita, mas valorizar mais os itens da esquerda \cite{manifesto2001}.
 
 \section{Gerente de Projetos}
 O gerente de projetos é a pessoa designada para liderar a equipe responsável por alcançar os objetivos do projeto \cite[p.~16]{pmi2013}. Segundo \citeonline[p.~485]{pressman2006} o Gerente de projetos é responsável por planejar, motivar, organizar e controlar os profissionais que fazem o trabalho de software.
@@ -553,53 +564,85 @@ O grupo de monitoramento e controle consiste dos processos necessários para aco
 Os processos deste grupo tem a finalidade de encerrar todas as atividades de todos os grupos de processos de gerenciamento do projeto, assim finalizado formalmente o projeto, as fases ou as obrigações contratuais. Este grupo de processo verifica se os processos definidos estão completos em todos os grupos de processos. Este grupo também formaliza encerramentos prematuros do projeto, como por exemplo, projetos abortados \cite[p.~55]{pmi2013}.
 
 
-\section{Gerenciamento ágil de projetos de software}
-Os fundamentos do gerenciamento ágil de software é o Manifesto Ágil e a Declaração de Interdependência.
-O manifesto ágil, como ficou conhecido, foi rascunhado em 2001 por um grupo de especialistas. Neste manifesto consta:
-
-\begin{citacao}
-Estamos descobrindo maneiras melhores de desenvolver software, fazendo-o nós mesmos e ajudando outros a fazerem o mesmo. Através deste trabalho, passamos a valorizar: 
-
-\textbf{Indivíduos e interações} mais que processos e ferramentas \newline
-\textbf{Software em funcionamento} mais que documentação abrangente \newline
-\textbf{Colaboração com o cliente} mais que negociação de contratos \newline
-\textbf{Responder a mudanças} mais que seguir um plano
-
-Ou seja, mesmo havendo valor nos itens à direita, valorizamos mais os itens à esquerda. \cite{manifesto2001}
-\end{citacao}
 
 
-\chapter{Metodologia}
+\chapter{Motivação}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A gerência de projetos se caracteriza como uma atividade fundamental para obtenção da qualidade do produto de software e do seu sucesso. O PMBOK é um conjunto de boas práticas de gerência de projetos consolidado e aceito internacionalmente.
+
+Os métodos ágeis estão sendo largamente utilizados por desenvolvedores de software, principalmente das MPEs, e se destacam por práticas simplificadas de desenvolvimento de software. Porém, surge a questão, se suas orientações para a gerência de projetos atendem as boas práticas indicadas pelo PMBOK.
+
+Assim, esta pesquisa visa analisar tais fatos, contribuindo com esclarecimentos sobre os mesmos, para auxiliar desenvolvedores de software para uma gerência efetiva de desenvolvimento de software.
+
+\chapter{Objetivos}
+
+Este trabalho tem como objetivo geral analisar práticas de gerência de projetos orientadas por métodos ágeis mais utilizados e verificar como atendem boas práticas de gerência de projetos indicadas pelo PMBOK.
+
+Como objetivos específicos têm-se:
+\begin{alineas}
+	\item Estudar as orientações do guia PMBOK para gerência de projetos.
+	\item Estudar as principais metodologias ágeis atualmente utilizadas no mercado de trabalho.
+	\item Relacionar as práticas das metodologias ágeis com as práticas do PMBOK.
+	\item Analisar o mapeamento realizado entre as práticas
+	\item Avaliação da análise comparativa feita por profissionais da empresa Benner
+\end{alineas}
+
+\chapter{Materiais e Métodos}
+
+Para o desenvolvimento do presente trabalho serão utilizados os seguintes recursos:
+\begin{alineas}
+	\item Normas ABNT para desenvolvimento de trabalhos científicos
+	\item Guia PMBOK 5ª edição em Português
+	\item Computador com sistema operacional Linux tendo instalado o \LaTeX e o editor Texmaker
+	\item Empresa Benner como case para avaliar a análise comparativa  realizada
+\end{alineas}
+
+Este trabalho será desenvolvido nas seguintes etapas:
+\begin{alineas}	
+	\item Revisão bibliográfica
+	\item Analise das práticas do PMBOK
+	\item Análise do ciclo de vida do XP e suas práticas de gerência
+	\item Análise do ciclo de vida do Scrum e suas práticas de gerência
+	\item Mapeamento entre as práticas de gerência
+	\item Análise do mapeamento
+	\item Avaliação da análise comparativa realizada, por profissionais da área da empresa Benner
+	\item Conclusão
+\end{alineas}
+	
+\chapter{Cronograma}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|} \hline
+ATIVIDADES                             &JUN & JUL & AGO & SET & OUT & NOV & DEZ & JAN  \\ \hline\hline
+Revisão bibliográfica                  &\ \ X &\ \ X &   &     &     &     &     &     \\ \hline
+Análise das práticas do PMBOK          &     &     &\ \ X &    &     &     &     &     \\ \hline
+Análise do ciclo de vida do XP e 	   &	 &	   &	 &	   &	 &	   &	 &	    \\
+suas práticas de gerência              &     &     &     &\ \ X &    &     &     &     \\ \hline
+Análise do ciclo de vida do Scrum 	   &	 &	   &	 &	   &	 &	   &	 &      \\
+e suas práticas de gerência            &     &     &     &\ \ X &    &     &     &     \\ \hline
+Mapeamento entre as práticas de        &     &     &     &     &     &     &     &      \\
+gerência                               &     &     &     &     &\ \ X &    &     &     \\ \hline
+Análise do mapeamento                  &     &     &     &     &\ \ X &    &     &     \\ \hline
+Avaliação por profissionais da área    &     &     &     &     &     &     &     &      \\
+da empresa Benner, da análise          &     &     &     &     &     &\ \ X &    &     \\ 
+comparativa feita                      &     &     &     &     &     &     &     &      \\ \hline
+Conclusão e entrega da monografia      &     &     &     &     &     &     &\ \ X &     \\ \hline
+Defesa                                 &     &     &     &     &     &     &     &\ \ X \\ \hline
+Correção e entrega da monografia       &     &     &     &     &     &     &     &      \\
+final                                  &     &     &     &     &     &     &     &\ \ X  \\ \hline
+\end{tabular}
+\end{table}
 
 
-Delectus expedita iusto, corporis veniam unde. Beatae nulla minus quo deleniti dolores velit, aut voluptatibus a, qui dignissimos aliquid pariatur obcaecati alias repudiandae? Excepturi ut atque ipsum culpa neque enim laboriosam necessitatibus saepe ad eum, vel ipsum iusto necessitatibus assumenda pariatur facere dolores modi neque facilis, hic velit facilis? Officia numquam facere deleniti aperiam laborum recusandae, error ipsum officia distinctio natus sit tempore consequatur nemo placeat, quibusdam ullam minima ducimus incidunt inventore corrupti laboriosam, quae libero tempore inventore totam expedita reiciendis.
+%\chapter{Resultados}
+
+%Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
+%\chapter{Conclusão}
 
-\chapter{Resultados}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-Quasi autem laborum nobis laboriosam modi, ipsum corporis debitis illo libero voluptatem deserunt minus totam aperiam, placeat dolor maiores impedit est fuga saepe. Distinctio sit cum commodi eum quisquam asperiores nisi explicabo, libero nobis iste natus, voluptatibus quasi debitis illum voluptatum molestiae magni porro doloribus unde tempore. Numquam sint nam debitis corporis exercitationem? Sed reprehenderit dolor quae esse ipsa vero fugiat expedita inventore non, hic obcaecati illum odit corrupti mollitia ad velit assumenda ratione natus nulla, perferendis dignissimos animi, perspiciatis enim pariatur possimus eaque?
-
-
-Ea molestias harum illum nobis molestiae cumque quidem optio, quo veniam dolore perspiciatis nesciunt deserunt doloremque nisi commodi nam, deleniti doloremque optio dolorem possimus velit nostrum amet, voluptate soluta nesciunt hic? Libero omnis est fugit soluta iste, ut tempora nesciunt dignissimos distinctio esse id sit, nam asperiores enim facere laudantium vitae fuga ut nulla omnis ab nisi? Tempore ducimus assumenda commodi deleniti placeat officia optio perspiciatis, placeat excepturi amet magni facilis autem officiis eius explicabo saepe nemo, esse nobis ipsam cum ipsa sit recusandae dignissimos quis cumque earum, laudantium quae soluta officiis incidunt quia consequuntur quidem explicabo sunt illo? Saepe aliquid obcaecati vitae iusto voluptate quod aut illo ex a, natus nisi exercitationem non deleniti obcaecati ipsam atque optio magni, enim distinctio quisquam?
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-Quasi autem laborum nobis laboriosam modi, ipsum corporis debitis illo libero voluptatem deserunt minus totam aperiam, placeat dolor maiores impedit est fuga saepe. Distinctio sit cum commodi eum quisquam asperiores nisi explicabo, libero nobis iste natus, voluptatibus quasi debitis illum voluptatum molestiae magni porro doloribus unde tempore. Numquam sint nam debitis corporis exercitationem? Sed reprehenderit dolor quae esse ipsa vero fugiat expedita inventore non, hic obcaecati illum odit corrupti mollitia ad velit assumenda ratione natus nulla, perferendis dignissimos animi, perspiciatis enim pariatur possimus eaque?
-
-
-Ea molestias harum illum nobis molestiae cumque quidem optio, quo veniam dolore perspiciatis nesciunt deserunt doloremque nisi commodi nam, deleniti doloremque optio dolorem possimus velit nostrum amet, voluptate soluta nesciunt hic? Libero omnis est fugit soluta iste, ut tempora nesciunt dignissimos distinctio esse id sit, nam asperiores enim facere laudantium vitae fuga ut nulla omnis ab nisi? Tempore ducimus assumenda commodi deleniti placeat officia optio perspiciatis, placeat excepturi amet magni facilis autem officiis eius explicabo saepe nemo, esse nobis ipsam cum ipsa sit recusandae dignissimos quis cumque earum, laudantium quae soluta officiis incidunt quia consequuntur quidem explicabo sunt illo? Saepe aliquid obcaecati vitae iusto voluptate quod aut illo ex a, natus nisi exercitationem non deleniti obcaecati ipsam atque optio magni, enim distinctio quisquam?
-
-
-\chapter{Conclusão}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+%Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 
