@@ -135,7 +135,7 @@
 
 \autor{Bruno Fernandes}
 \local{Maringá}
-\data{Fevereiro de 2016}
+\data{Fevereiro de 2017}
 \orientador{Prof. Dr. Donizete Bruzarosco}
 
 \instituicao{
@@ -308,7 +308,7 @@
     \vspace*{\fill}
    \end{center}
     
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2015:
+   Trabalho aprovado. \imprimirlocal, 01 de Fevereiro de 2017:
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
    \assinatura{\textbf{Professor} \\ Convidado 1}
@@ -488,7 +488,31 @@ No capítulo 4, é feita a análise do mapeamento realizado no capítulo anterio
 No capítulo 5, é resgatada a relevância da gerência de projetos de software e indicados como os objetivos deste trabalho são atendidos. Também são apresentados as considerações de seus resultados, as dificuldades enfrentadas, as contribuições e trabalhos futuros.
 
 \chapter{Engenharia de Software com abordagem em gerência de projetos}
+Antes de falarmos em gerenciamento de projetos de desenvolvimento de software, precisamos de algumas definições de software. \citeonline[p.~3]{sommerville2011} define software como sendo um programa de computador juntamente com toda sua documentação e dados de configuração envolvidos. Quando um profissional desenvolve um software para si mesmo, e que ninguém mais irá utilizar, então não é preciso se preocupar com engenharia de software. Porém, os produtos de software são feitos de forma que outros o utilizem, bem como outros profissionais realizem alterações, por isso é importante que informações adicionais estejam presentes junto ao software. A engenharia de software é uma disciplina que se preocupa com todos os aspectos da produção do software \cite[p.~3]{sommerville2011}.
+Para \citeonline[p.~39]{pressman2011}, engenharia de software é uma tecnologia em camadas com foco na qualidade e as camadas desta tecnologia são: Processos, métodos e ferramentas.
+Outra definição importante também nos é apresentada por \cite[p.~52]{pressman2011}, que nos diz que um processo de software é uma metodologia, sequencia de passos previsíveis ou um roteiro, para as atividades, ações e tarefas necessárias para o desenvolvimento de um software de alta qualidade. Uma metodologia de processo genérica possui cinco atividades metodológicas: comunicação, planejamento, modelagem, construção e entrega.
+Por fim, segundo \citeonline[p.~59]{pressman2011}, modelos prescritivos:	
 
+\begin{citacao}
+Prescrevem um conjunto de elementos de processo - atividades metodológicas, ações de engenharia de software, tarefas, produtos de trabalho, garantia da qualidade e mecanismos de controle de mudanças para cada projeto. Cada modelo de processo também prescreve um fluxo de processo (também denominado \textit{fluxo de trabalho}) - ou seja, a forma pela qual os elementos do processo estão inter-relacionados.
+\end{citacao}
+
+Alguns modelos prescritivos são importantes para entendermos como a engenharia de software evoluiu até chegarmos em processos como o Processo Unificado e os processos ágeis.
+O modelo cascata sugere uma abordagem de desenvolvimento sequencial e sistemática. Este modelo possui as seguintes fases: Levantamento de requisitos, planejamento, modelagem, construção e emprego, como mostra a Figura~\ref{fig:modelo_cascata}
+
+\begin{figure}[htb]
+\RawFloats
+	\caption{\label{fig:modelo_cascata}Modelo Cascata}
+	\begin{center}
+	    \includegraphics[scale=0.60]{figuras/modelo_cascata.png}
+	\end{center}
+	\legend{Fonte: \cite[p.~60]{pressman2011}}
+\end{figure}
+
+O modelo de processo incremental ........
+
+
+\section{Conceitos básicos de gerência de projeto de software}
 De acordo com o \textit{Project Management Institute} \cite{pmi2013}, projeto\index{Projeto} é \dblquote{um esforço temporário empreendido para criar um produto, serviço ou resultado único}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes. Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consome recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}. É importante salientar, também, o que não é um projeto. \dblquote{Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo} \cite[p.~6]{grayLarson2009}.
 
 No Brasil existem dois termos parecidos, mas com sentidos diferentes e que não devem ser confundidos:
@@ -540,7 +564,7 @@ O manifesto ágil, como ficou conhecido, foi rascunhado em 2001 por um grupo de 
 
 Porém, ao contrário do que muitos pensam, o desenvolvimento ágil não deve abandonar os itens à direita, mas valorizar mais os itens da esquerda \cite{manifesto2001}.
 
-\section{Gerente de Projetos}
+\subsection{Gerente de Projetos}
 O gerente de projetos é a pessoa designada para liderar a equipe responsável por alcançar os objetivos do projeto \cite[p.~16]{pmi2013}. Segundo \citeonline[p.~485]{pressman2006} o Gerente de projetos é responsável por planejar, motivar, organizar e controlar os profissionais que fazem o trabalho de software.
 
 Segundo o \citeonline{pmi2013} para que o gerente de projetos seja eficiente e eficaz, além de possuir habilidades na área específica do projeto em que está atuando, é desejável que também possua as seguintes competências:
@@ -571,7 +595,7 @@ Para \citeonline[p.~9]{kerzner2011}, dentre as habilidades desejadas para o Gere
 
 O trabalho do Gerente de projetos varia bastante, de acordo com a organização e o produto que está sendo desenvolvido. Mas para \citeonline{sommerville2011}, a maioria dos gerentes de projetos assumem, em algum momento, responsabilidade por algumas atividades bases comuns. O planejamento do projeto é uma destas atividades, onde o gerente deve garantir que o trabalho esteja sendo feito conforme os padrões e devendo acompanhar o progresso para garantir que o desenvolvimento está no prazo e dentro do orçamento. Também é responsável por fazer a ponte entre o desenvolvimento e os clientes e gerentes da empresa, mostrando o andamento do projeto de forma concisa e coerente, abstraindo as informações mais técnicas. Os gerenciamentos de riscos e pessoas são outras atividades desempenhadas em algum momento pelos gerentes de projetos. Eles devem ser capazes de avaliar e controlar os riscos que podem afetar o projeto e agir quando necessário, bem como estabelecer formas de trabalho que levem a um desempenho eficaz da equipe. Por fim, os gerentes devem ser capazes de elaborar propostas, descrevendo os objetivos do projeto e como ele será realizado, visando ganhar um contrato para executar um item de trabalho.
 
-\section{Ciclo de vida do projeto}
+\subsection{Ciclo de vida do projeto}
 Para compreender o gerenciamento de projetos é importante conhecer seu ciclo de vida. Segundo o \citeonline[p.~38]{pmi2013}, ciclo de vida do projeto é a serie de fases pelas quais o projeto passa, desde seu início até o término. As etapas entre a inicialização e a finalização do projeto podem ser sequenciais, iterativas ou sobrepostas e estas etapas são definidas ou moldadas conforme a necessidade de gerenciamento da organização. Independentemente dos moldes utilizados pelas empresas, todos os projetos possuem início e fim definidos e as fases podem ser desmembradas em entregas ou resultados intermediários.
 
 Apesar de variar em tamanho e complexidade, todos os projetos podem ser mapeados para a estrutura de ciclo de vida a seguir \cite[p.~39]{pmi2013}:
@@ -607,19 +631,19 @@ A Figura~\ref{fig:grupo_processos} mostra a interação entre cada um dos grupos
 	\legend{Fonte: \cite[p.~51]{pmi2013}}
 \end{figure}
 
-\subsection{Iniciação}
+\subsubsection{Iniciação}
 A fase de inicialização do projeto é quando a autorização para o início de um novo projeto, ou nova fase de um projeto é obtida, o escopo inicial é definido, os recursos financeiros iniciais são comprometidos, os interessados internos e externos são identificados e o Gerente de projeto é definido. O objetivo principal desta fase é alinhar as expectativas das partes interessadas com os objetivos do projeto, dar-lhes visibilidade sobre o escopo e objetivos, e mostrar como a sua participação no projeto irá contribuir para que as expectativas sejam atingidas \cite[p.~54]{pmi2013}.
 
-\subsection{Planejamento}
+\subsubsection{Planejamento}
 Neste grupo de processos estão os processos realizados para estabelecer o escopo, definir e refinar objetivos e desenvolver o curso de ações necessário para se atingir estes objetivos. O principal benefício deste grupo de processos é delinear a estratégia e a tática, e também o caminho para a conclusão do projeto com sucesso. O planejamento explorará as seguintes áreas apresentadas no Guia PMBOK: escopo, tempo, qualidade, comunicações, recursos humanos, riscos, aquisições e gerenciamento das partes interessadas \cite[p.~55]{pmi2013}.
 
-\subsection{Execução}
+\subsubsection{Execução}
 Este grupo consiste dos processos executados para se concluir o trabalho definido no plano de gerenciamento do projeto. Este grupo também envolve coordenar a equipe e recursos, e gerenciar as expectativas das partes interessadas. Durante a execução do projeto podem surgir alterações com relação ao planejado e podem surgir riscos não esperados. Estas alterações são analisadas e, se necessário, o plano se de gerenciamento é alterado \cite[p.~55]{pmi2013}.
 
-\subsection{Monitoramento e Controle}
+\subsubsection{Monitoramento e Controle}
 O grupo de monitoramento e controle consiste dos processos necessários para acompanhar e analisar o andamento e o desempenho do projeto. O principal benefício deste grupo é a medição e análise do desempenho do projeto com o objetivo de identificar variações no plano de gerenciamento do projeto. Este controle fornece à equipe uma visão melhor do andamento do projeto e identifica as áreas que precisam de mais atenção \cite[p.~55]{pmi2013}.
 
-\subsection{Encerramento}
+\subsubsection{Encerramento}
 Os processos deste grupo tem a finalidade de encerrar todas as atividades de todos os grupos de processos de gerenciamento do projeto, assim finalizado formalmente o projeto, as fases ou as obrigações contratuais. Este grupo de processo verifica se os processos definidos estão completos em todos os grupos de processos. Este grupo também formaliza encerramentos prematuros do projeto, como por exemplo, projetos abortados \cite[p.~55]{pmi2013}.
 
 
