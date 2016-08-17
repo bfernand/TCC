@@ -488,29 +488,19 @@ No capítulo 4, é feita a análise do mapeamento realizado no capítulo anterio
 No capítulo 5, é resgatada a relevância da gerência de projetos de software e indicados como os objetivos deste trabalho são atendidos. Também são apresentados as considerações de seus resultados, as dificuldades enfrentadas, as contribuições e trabalhos futuros.
 
 \chapter{Engenharia de Software com abordagem em gerência de projetos}
-Antes de falarmos em gerenciamento de projetos de desenvolvimento de software, precisamos de algumas definições de software. \citeonline[p.~3]{sommerville2011} define software como sendo um programa de computador juntamente com toda sua documentação e dados de configuração envolvidos. Quando um profissional desenvolve um software para si mesmo, e que ninguém mais irá utilizar, então não é preciso se preocupar com engenharia de software. Porém, os produtos de software são feitos de forma que outros o utilizem, bem como outros profissionais realizem alterações, por isso é importante que informações adicionais estejam presentes junto ao software. A engenharia de software é uma disciplina que se preocupa com todos os aspectos da produção do software \cite[p.~3]{sommerville2011}.
-Para \citeonline[p.~39]{pressman2011}, engenharia de software é uma tecnologia em camadas com foco na qualidade e as camadas desta tecnologia são: Processos, métodos e ferramentas.
-Outra definição importante também nos é apresentada por \cite[p.~52]{pressman2011}, que nos diz que um processo de software é uma metodologia, sequencia de passos previsíveis ou um roteiro, para as atividades, ações e tarefas necessárias para o desenvolvimento de um software de alta qualidade. Uma metodologia de processo genérica possui cinco atividades metodológicas: comunicação, planejamento, modelagem, construção e entrega.
-Por fim, segundo \citeonline[p.~59]{pressman2011}, modelos prescritivos:	
+A engenharia de software é uma disciplina que se preocupa com todos os aspectos da produção do software \cite[p.~3]{sommerville2011}. Para \citeonline[p.~39]{pressman2011}, engenharia de software é uma tecnologia em camadas com foco na qualidade e as camadas desta tecnologia são: Processos (sendo o alicerce), métodos e ferramentas.
 
-\begin{citacao}
-Prescrevem um conjunto de elementos de processo - atividades metodológicas, ações de engenharia de software, tarefas, produtos de trabalho, garantia da qualidade e mecanismos de controle de mudanças para cada projeto. Cada modelo de processo também prescreve um fluxo de processo (também denominado \textit{fluxo de trabalho}) - ou seja, a forma pela qual os elementos do processo estão inter-relacionados.
-\end{citacao}
+Outra definição importante também é apresentada por \citeonline[p.~52]{pressman2011}, que diz que um processo de software é uma metodologia, sequência de passos previsíveis ou um roteiro, para as atividades, ações e tarefas necessárias para o desenvolvimento de um software de alta qualidade. Uma metodologia de processo genérica possui cinco atividades metodológicas: comunicação, planejamento, modelagem, construção e entrega. Com base nestas atividades genéricas a engenharia de software oferece alguns modelos prescritivos para o desenvolvimento de software, sendo os principais: 
 
-Alguns modelos prescritivos são importantes para entendermos como a engenharia de software evoluiu até chegarmos em processos como o Processo Unificado e os processos ágeis.
-O modelo cascata sugere uma abordagem de desenvolvimento sequencial e sistemática. Este modelo possui as seguintes fases: Levantamento de requisitos, planejamento, modelagem, construção e emprego, como mostra a Figura~\ref{fig:modelo_cascata}
+\begin{alineas}
+	\item Modelo em cascata
+	\item Modelo incremental
+	\item Modelo RAD
+	\item Modelo de Prototipação
+	\item Modelo Espiral
+\end{alineas}
 
-\begin{figure}[htb]
-\RawFloats
-	\caption{\label{fig:modelo_cascata}Modelo Cascata}
-	\begin{center}
-	    \includegraphics[scale=0.60]{figuras/modelo_cascata.png}
-	\end{center}
-	\legend{Fonte: \cite[p.~60]{pressman2011}}
-\end{figure}
-
-O modelo de processo incremental ........
-
+Foram a partir dos modelos prescritivos que surgiram os Métodos ágeis e o Processo Unificado.
 
 \section{Conceitos básicos de gerência de projeto de software}
 De acordo com o \textit{Project Management Institute} \cite{pmi2013}, projeto\index{Projeto} é \dblquote{um esforço temporário empreendido para criar um produto, serviço ou resultado único}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes. Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consome recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}. É importante salientar, também, o que não é um projeto. \dblquote{Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo} \cite[p.~6]{grayLarson2009}.
