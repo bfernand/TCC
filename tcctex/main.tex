@@ -479,6 +479,7 @@ Além dos recursos utilizados, não menos importante para o desenvolvimento dest
 \end{alineas}
 
 \section{Estrutura do Trabalho}
+
 No capítulo 2 a gerência de projetos  é contextualizada na Engenharia de Software, bem como é apresentada a origem das principais metodologias utilizadas atualmente para o desenvolvimento de software. Também é mostrada uma síntese das práticas do PMBOK e o ciclo de vida dos dois métodos ágeis mais utilizados. Finalmente, são descritas as principais características de uma MPE e suas restrições.
 
 No capítulo 3, o conhecimento adquirido no referencial teórico é utilizado para criar um mapeamento entre as práticas de gerência de projetos dos métodos ágeis XP/Scrum e do PMBOK.
@@ -488,19 +489,24 @@ No capítulo 4, é feita a análise do mapeamento realizado no capítulo anterio
 No capítulo 5, é resgatada a relevância da gerência de projetos de software e indicados como os objetivos deste trabalho são atendidos. Também são apresentados as considerações de seus resultados, as dificuldades enfrentadas, as contribuições e trabalhos futuros.
 
 \chapter{Engenharia de Software com abordagem em gerência de projetos}
-A engenharia de software é uma disciplina que se preocupa com todos os aspectos da produção do software \cite[p.~3]{sommerville2011}. Para \citeonline[p.~39]{pressman2011}, engenharia de software é uma tecnologia em camadas com foco na qualidade e as camadas desta tecnologia são: Processos (sendo o alicerce), métodos e ferramentas.
 
-Outra definição importante também é apresentada por \citeonline[p.~52]{pressman2011}, que diz que um processo de software é uma metodologia, sequência de passos previsíveis ou um roteiro, para as atividades, ações e tarefas necessárias para o desenvolvimento de um software de alta qualidade. Uma metodologia de processo genérica possui cinco atividades metodológicas: comunicação, planejamento, modelagem, construção e entrega. Com base nestas atividades genéricas a engenharia de software oferece alguns modelos prescritivos para o desenvolvimento de software, sendo os principais: 
+É inegável a importância do software na sociedade atual. Hoje o software está presente no comercio, na cultura e em nossas vidas cotidianas, afetando quase todos os aspectos da vida humana \cite[p.~29]{pressman2011}.
+
+A engenharia de software é uma disciplina que se preocupa com todos os aspectos da produção do software por isto é tão importante para o desenvolvimento deste. É através da Engenharia que o software pode ser construído com qualidade \cite[p.~3]{sommerville2011}. Para \citeonline[p.~39]{pressman2011}, engenharia de software é uma tecnologia em camadas com foco na qualidade e as camadas desta tecnologia são: Processos, métodos e ferramentas, sendo que o primeiro é o alicerce da engenharia de software.
+
+Para \citeonline[p.~52]{pressman2011}, um processo de software é uma metodologia, sequência de passos previsíveis ou um roteiro, para as atividades, ações e tarefas necessárias para o desenvolvimento de um software de alta qualidade. 
+
+Uma metodologia de processo genérica possui cinco atividades metodológicas: comunicação, planejamento, modelagem, construção e entrega. Com base nestas atividades genéricas a engenharia de software oferece alguns modelos prescritivos para o desenvolvimento de software e foram a partir destes modelos que surgiram os Métodos ágeis e o Processo Unificado. Os principais modelos prescritivos são: 
 
 \begin{alineas}
-	\item Modelo em cascata
-	\item Modelo incremental
-	\item Modelo RAD
-	\item Modelo de Prototipação
-	\item Modelo Espiral
+	\item Modelo em cascata;
+	\item Modelo incremental;
+	\item Modelo RAD;
+	\item Modelo de Prototipação;
+	\item Modelo Espiral.
 \end{alineas}
 
-Foram a partir dos modelos prescritivos que surgiram os Métodos ágeis e o Processo Unificado.
+Neste contexto da engenharia de software, o gerenciamento de projetos é muito importante, pois dá as ferramentas necessárias para o planejamento, organização, monitoramento e controle do desenvolvimento do software. O gerenciamento de projeto não é uma fase da engenharia, mas uma atividade que atua do início ao fim do processo de desenvolvimento do software \cite{pressman2011}.
 
 \section{Conceitos básicos de gerência de projeto de software}
 De acordo com o \textit{Project Management Institute} \cite{pmi2013}, projeto\index{Projeto} é \dblquote{um esforço temporário empreendido para criar um produto, serviço ou resultado único}. Temporário porque um projeto precisa ter começo e fim definidos e único pois deve ser, de alguma forma, diferente de todos os produtos, serviços e resultados semelhantes. Adicionando-se à isto, um projeto possui limite de financiamento, ou orçamento, e consome recursos humanos e não humanos, ou seja, dinheiro, pessoas, máquinas, entre outros \cite[p.~2]{kerzner2011}. É importante salientar, também, o que não é um projeto. \dblquote{Projetos não devem ser confundidos com o trabalho diário. Um projeto não é rotineiro nem repetitivo} \cite[p.~6]{grayLarson2009}.
